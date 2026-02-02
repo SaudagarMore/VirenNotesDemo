@@ -1,0 +1,10 @@
+# from array import array
+# mydata=array('i',[10,50,32,90,40])
+# print(type(mydata))
+# print("Original array:",mydata)
+# mylist=list(mydata)
+# print("Before Sorting into list of array:",mylist)
+# mylist.sort()
+# print("After Sorting into list of array:",mylist)
+# mylist.reverse()
+# print("After Reverse:",mylist)

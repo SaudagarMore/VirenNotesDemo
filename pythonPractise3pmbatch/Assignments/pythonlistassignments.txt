@@ -1,0 +1,38 @@
+Append Elements
+1)Take 5 numbers from the user and store them in a list using the append() method and then print the final list.
+
+Extend a List Test=[10,50,96,30,80]
+2)Create a list with some initial values and extend it with another list using the extend() method.
+
+Insert an Element
+3)create predefined 4 element list ,Take a string input from the user and insert it at a specific position in a list using the insert() method.
+
+Remove an Element
+4)create a list 5 values and Take a number from the user and remove its from a predefined list using the remove() method.
+
+Pop Elements
+5)crete a list and add 5 values from user input and use the pop() and then print the list.
+
+Remove the last element
+6)take list as sample add 7 elements from user Remove an element at a given index
+
+Clear a List
+7)Create a list with multiple items and remove all elements using the clear() method.
+
+Find Index and Count
+8)Take a list of strings and use the index() and count() methods to:
+Find the first index of a given element
+Count how many times an element appears
+
+Sort and Reverse
+9)Create a list of numbers and use the sort() and reverse() methods to sort it in ascending and then reverse the order.
+
+Copy a List
+10)Take a list from the user, copy it using the copy() method, and show that changes to the original list do not affect the copy.
+Use max(), min(), sum(), len()
+
+11)Take a list of numbers from the user and display:
+Maximum value
+Minimum value
+Sum of all numbers
+Total number of elements

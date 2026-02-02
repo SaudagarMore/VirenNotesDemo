@@ -1,0 +1,223 @@
+NGINX Web Server
+
+🧠 What is NGINX?
+
+NGINX is a free, open-source web server. It can also work as:
+
+* A **reverse proxy** (for load balancing)
+* A **mail proxy**
+* A **caching server**
+* A **static file server** (HTML, images, etc.)
+
+---
+
+ 🎯 Real-World Example
+
+Imagine you have a **fast-food counter**:
+
+* **Customer comes** → asks for a burger (browser requests a website)
+* **NGINX (the staff)** → quickly serves a **pre-cooked burger** (HTML page)
+* If the burger needs cooking (dynamic data), NGINX forwards it to the kitchen (backend server)
+
+---
+
+ ✅ Step-by-Step: Install & Use NGINX on Linux
+
+We'll use **Ubuntu** or **Amazon Linux** (most common on EC2).
+
+---
+
+ 🔹 STEP 1: Update Your Server
+
+📌 Command:
+
+```bash
+sudo apt update           # for Ubuntu
+sudo yum update -y        # for Amazon Linux
+```
+
+---
+ 🔹 STEP 2: Install NGINX
+
+📌 Command:
+
+```bash
+sudo apt install nginx -y       # Ubuntu
+sudo amazon-linux-extras install nginx1 -y   # Amazon Linux 2
+```
+
+---
+
+ 🔹 STEP 3: Start and Enable NGINX
+
+📌 Command:
+
+```bash
+sudo systemctl start nginx
+sudo systemctl enable nginx
+```
+
+👉 This starts NGINX and ensures it auto-starts on boot.
+
+---
+
+ 🔹 STEP 4: Check if It’s Running
+
+📌 Command:
+
+```bash
+sudo systemctl status nginx
+```
+
+You should see **“active (running)”**
+
+---
+
+ 🔹 STEP 5: Allow Web Traffic in Firewall (if enabled)
+
+📌 Command:
+
+```bash
+sudo ufw allow 'Nginx HTTP'     # Ubuntu + UFW
+sudo firewall-cmd --permanent --add-service=http    # CentOS
+sudo firewall-cmd --reload
+```
+
+Or allow **port 80** and **443** if using AWS Security Groups.
+
+---
+
+ 🔹 STEP 6: Access Your Web Server
+
+* Open your **browser**
+* Visit: `http://<your-server-public-ip>`
+
+🎉 You’ll see the default **NGINX Welcome Page**
+
+---
+
+✍️ Serve Your Own HTML Website
+
+ 1. Replace the Default Page
+
+📌 Location:
+
+```bash
+cd /var/www/html
+```
+
+📌 Create or Edit:
+
+```bash
+sudo nano index.html
+```
+
+📌 Sample Content:
+
+```html
+<html>
+  <head><title>My NGINX Site</title></head>
+  <body>
+    <h1>Hello from Jarves' NGINX Server!</h1>
+  </body>
+</html>
+```
+
+Save and exit. Refresh the browser — you’ll see your message!
+
+---
+
+🛠️ Useful NGINX Commands
+
+| Task                           | Command                        |
+| ------------------------------ | ------------------------------ |
+| Start NGINX                    | `sudo systemctl start nginx`   |
+| Stop NGINX                     | `sudo systemctl stop nginx`    |
+| Restart NGINX                  | `sudo systemctl restart nginx` |
+| Reload config without downtime | `sudo systemctl reload nginx`  |
+| Check status                   | `sudo systemctl status nginx`  |
+| Test config for errors         | `sudo nginx -t`                |
+| View NGINX version             | `nginx -v`                     |
+
+---
+
+ ⚙️ NGINX Configuration Files
+
+| File                          | Purpose                          |
+| ----------------------------- | -------------------------------- |
+| `/etc/nginx/nginx.conf`       | Main config file                 |
+| `/etc/nginx/sites-available/` | Virtual hosts (for domain setup) |
+| `/var/www/html/`              | Default site files               |
+| `/etc/nginx/conf.d/`          | Extra custom configs             |
+
+---
+
+➕ BONUS: Host Multiple Sites (Virtual Hosting)
+
+1. Create a folder:
+
+```bash
+sudo mkdir -p /var/www/mysite.com/html
+```
+
+2. Create HTML file:
+
+```bash
+echo "<h1>Welcome to mysite.com</h1>" | sudo tee /var/www/mysite.com/html/index.html
+```
+
+3. Create config file:
+
+```bash
+sudo nano /etc/nginx/sites-available/mysite.com
+```
+
+Paste:
+
+```nginx
+server {
+    listen 80;
+    server_name mysite.com www.mysite.com;
+
+    root /var/www/mysite.com/html;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
+
+4. Enable the site:
+
+```bash
+sudo ln -s /etc/nginx/sites-available/mysite.com /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+🎯 You can now map `mysite.com` to your server's IP (via DNS or `/etc/hosts`) and access it.
+
+---
+
+📘 Summary
+
+| Step | Action                          |
+| ---- | ------------------------------- |
+| 1️⃣  | Install NGINX                   |
+| 2️⃣  | Start and enable service        |
+| 3️⃣  | Open port 80 (HTTP)             |
+| 4️⃣  | Serve custom HTML               |
+| 5️⃣  | Learn config files and commands |
+
+---
+
+💡 Pro Tips
+
+* Use NGINX for **static websites**
+* Combine with **PHP or Node.js** for dynamic apps
+* Works well with **SSL (HTTPS)** using **Let's Encrypt**
+
+---
+
+

@@ -1,0 +1,17 @@
+1)what is java and what are the application of java
+2)what inheritance and explain the types of inheritance 
+3)explaing the excution of java appliction how to complier and run java application
+4)what is string and explaing five method of string
+5)write the programme for prime number using user input
+6)what is Exception and how to handle runtime exception in java
+7)what is linked list in java and types of linked list and explaing both
+8)what is polymorphism in java and differnece between compiler and runtime polymorphism.
+9)differnece between hashtable and hashset.
+10)explaing interface in java and purpose of interface in java.
+-----------------------------
+1)what is jdbc
+2)expalin jsp and show 2 jsp tag
+3)what httpresponse and httprequest 
+4)what is servelet and how to print data on servlet
+5)what is access specifiers in java.
+6)what is ser

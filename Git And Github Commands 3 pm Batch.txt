@@ -1,0 +1,20 @@
+Step.1. Go to your project folder
+cd path/to/your/project
+
+Step 2. Initialize git 
+git init
+
+Step 3. Add all files
+git add .
+
+Step 4. Commit the files
+git commit -m "Initial commit"
+
+Step 5. Connect local repo to GitHub repo
+git remote add origin https://github.com/VirenMore/TestRepo.git
+
+Step 6. Push files to GitHub
+git branch -M main
+
+Step 7.git push -u origin main
+

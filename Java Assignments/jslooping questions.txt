@@ -1,0 +1,27 @@
+1)Print numbers from 1 to 10 using a for loop.
+2)Print even numbers between 1 and 20 using a while loop.
+3)Print odd numbers from 1 to 15 using a do...while loop.
+4)Find the sum of numbers from 1 to 100 using a for loop.
+5)Print the multiplication table of 5 using a while loop.
+6)Print numbers from 10 to 1 using a for loop (reverse order).
+7)Print the first 10 natural numbers using a do...while loop.
+8)Print all multiples of 3 between 1 and 30 using a for loop.
+9)Find the factorial of a number using a while loop (e.g., 5! = 120).
+10)Print the squares of numbers from 1 to 10 using a for loop.
+
+11)Print the Fibonacci series up to 10 terms using a for loop.
+12)Check if a number is prime using a while loop.
+13)Count how many digits are in a number using a do...while loop.
+14)Reverse a number using a while loop (e.g., 123 → 321).
+15)Calculate the sum of digits of a number using a while loop.
+16)Print a pattern like below using a for loop:
+
+*
+**
+***
+****
+*****
+17)Find the least common multiple (LCM) of two numbers using a while loop.
+18)Print all prime numbers between 1 and 50 using nested for loops.
+19)Check if a number is a palindrome using a while loop (e.g., 121).
+20)Print a countdown timer from 10 to 0 using a do...while loop.

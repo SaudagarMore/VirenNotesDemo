@@ -1,0 +1,32 @@
+Assignment 1: Objective: Use put(), get(), containsKey(), getOrDefault(), replace(), and remove().
+Problem:Create a HashMap<String, Integer> to store student names and their marks. Perform the following:
+Add 5 students with their marks.
+Check if a student named "John" exists.
+If "John" exists, update his marks to 95. If not, add him with default marks 60.
+Remove any student with marks less than 40.
+Print the final list of students.
+
+Assignment 2: Objective: Use putIfAbsent(), replace(K, V, V), remove(K, V), and entrySet().
+Problem:Create an inventory system using HashMap<String, Integer> to track product quantities.
+Add 3 products with quantities using putIfAbsent().
+Update the quantity of "Apples" from 10 to 15 only if it's currently 10.
+Remove "Oranges" from the inventory only if the quantity is exactly 0.
+Display the current inventory using entrySet().
+
+Assignment 3:Objective: Use putAll(), size(), values(), and clear().
+Problem:You are given two HashMaps:
+HashMap<Integer, String> map1 = new HashMap<>();
+HashMap<Integer, String> map2 = new HashMap<>();
+Add 3 entries to map1 and 2 entries to map2.
+Merge map2 into map1 using putAll().
+Print all values of the merged map using values().
+Print the size before and after clearing the map using clear() and size().
+
+Assignment 5: Login Authentication System
+Objective: Use isEmpty(), containsKey(), get(), and put().
+Problem:Create a simple login system using HashMap<String, String> where the key is the username and the value is the password.
+Allow admin to add users with passwords.
+Ask the user to enter a username and password.
+Check if the map is empty.
+If the username exists, check if the password matches.
+Print login success or failure message accordingly.

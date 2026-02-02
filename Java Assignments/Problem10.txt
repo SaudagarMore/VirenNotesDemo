@@ -1,0 +1,80 @@
+/*
+ * Q:10. [Create a class named Employee with the following attributes:
+int id
+String name
+double salary
+Write a Java program that does the following:]
+i)Takes input from the user to create an array of 3 Employee objects.
+ii)Displays the details of all employees.
+iii)Find and display the employee with the highest salary.
+iv)Calculate and display the average salary of all employees.
+v)Display the names of employees whose salary is below the average.
+ */
+package DemoApp;
+import java.util.Scanner;
+public class EmpTest {
+    int id;
+    String name;
+    double salary;  
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+    public double getSalary() {
+        return salary;
+    }    
+    public String getName() {
+        return name;
+    }    
+    @Override
+    public String toString() {
+        return "EmpTest [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+    }
+    public static void main(String[] args) {
+        EmpTest[]emp1=new EmpTest[3];//Array of Objects
+        System.out.println("------------------------------------------------------------------------------");
+        Scanner sa=new Scanner(System.in);
+        int j;
+        for(j=0;j<3;j++){
+            emp1[j]=new EmpTest();
+
+            System.out.println("Enter Emp Id");
+            emp1[j].setId(sa.nextInt());
+            System.out.println("Enter Emp Name:");
+            emp1[j].setName(sa.next());
+            System.out.println("Enter Emp Salary:");
+            emp1[j].setSalary(sa.nextDouble());
+        }        
+        System.out.println("using loop");
+
+          for(j=0;j<3;j++){
+            System.out.println(emp1[j]);
+          }
+          double highestsalary=0;
+        for(j=0;j<3;j++){
+            if(emp1[j].getSalary()>highestsalary){
+                highestsalary=emp1[j].getSalary();
+            }
+        }
+        double sum=0;
+        for(j=0;j<3;j++){
+            sum+=emp1[j].getSalary();
+        }
+        double avg=sum/emp1.length;
+        
+        System.out.println("Total Emp Salary is:"+sum);
+        System.out.println("Total Avergae of Salary is:"+(sum/emp1.length));
+        
+        for(j=0;j<3;j++){
+            if(emp1[j].getSalary()<avg){
+                System.out.println("Below Average Employee Name:"+emp1[j].getName());
+                 }
+        }
+        System.out.println("Highest salary is:"+highestsalary);
+    }
+}

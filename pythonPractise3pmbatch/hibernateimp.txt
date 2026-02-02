@@ -1,0 +1,227 @@
+1)Calculate Sum to Two array
+2)Create Arrray as MyArray Add 10 Values From user And Take A number from user and fint that number is present or not into that array.
+3)Create Arrray as MyArray Add 10 Values From user Check Array contains Duplicate Value or not
+4)Write a function stats_summary() that accepts a list of integers and returns a tuple containing the sum, maximum, minimum, and average of the list.
+5)create a array as Average pass that Arrayy To Function PrintGreterThanAverage() Filter Numbers Greater Than Average.
+
+
+Write a function that:
+Accepts a list or array.array of integers from the user.
+Calculates the average of the numbers.
+Returns a new list containing only the elements that are greater than the average.
+Use a function and optionally use filter() or list comprehension.
+
+Course Input and Data Insertion
+    CourseDaoEntity courseDaoEntity = new CourseDaoEntity(courseName, courseDuration, courseMark, courseFee);
+
+courseDaoEntity.getTeacherDaoEntities().add(teacherDaoEntity);
+    
+Student Input and Data Insertion
+
+    StudentDaoEntity studentDaoEntity = new StudentDaoEntity(studentName, studentAge, studentPhone);
+
+    studentDaoEntity.getCourseDaoEntities().add(courseDaoEntity);
+    teacherDaoEntity.getStudentDaoEntities().add(studentDaoEntity);
+    
+    session.save(teacherDaoEntity);
+    session.save(courseDaoEntity); 
+    session.save(studentDaoEntity);
+    session.getTransaction().commit();
+    System.out.println("\n All Records Saved Successfully!");    
+    sa.close();
+------------------------------------------------------------------------------------------
+
+CREATE TABLE sales (
+    id INT PRIMARY KEY,
+    product VARCHAR(50),
+    region VARCHAR(50),
+    quantity INT,
+    price DECIMAL(5,2)
+);
+----------------------------------
+INSERT INTO sales (id, product, region, quantity, price) VALUES
+(1, 'Apple', 'North', 10, 2.00),
+(2, 'Apple', 'South', 15, 2.00),
+(3, 'Banana', 'North', 8, 1.50),
+(4, 'Banana', 'South', 12, 1.50),
+(5, 'Apple', 'North', 20, 2.00),
+(6, 'Banana', 'North', 5, 1.50),
+(7, 'Mango', 'South', 25, 3.00),
+(8, 'Orange', 'East', 30, 2.50),
+(9, 'Grapes', 'West', 18, 2.80),
+(10, 'Strawberry', 'North', 12, 3.50),
+(11, 'Blueberry', 'South', 15, 4.00),
+(12, 'Pineapple', 'East', 20, 3.20),
+(13, 'Watermelon', 'West', 10, 5.00),
+(14, 'Peach', 'North', 25, 2.75),
+(15, 'Cherry', 'South', 22, 3.80),
+(16, 'Kiwi', 'East', 16, 2.90),
+(17, 'Pear', 'West', 14, 2.40),
+(18, 'Plum', 'North', 19, 3.10),
+(19, 'Apricot', 'South', 21, 3.00),
+(20, 'Pomegranate', 'East', 17, 4.50),
+(21, 'Fig', 'West', 13, 3.90),
+(22, 'Cantaloupe', 'North', 24, 3.60),
+(23, 'Lemon', 'South', 20, 2.20),
+(24, 'Lime', 'East', 18, 2.10),
+(25, 'Coconut', 'West', 15, 4.80),
+(26, 'Papaya', 'North', 23, 3.30),
+(27, 'Guava', 'South', 12, 3.00),
+(28, 'Raspberry', 'East', 10, 4.20),
+(29, 'Blackberry', 'West', 16, 4.00),
+(30, 'Cranberry', 'North', 14, 3.70),
+(31, 'Tomato', 'South', 30, 1.80),
+(32, 'Carrot', 'East', 22, 1.50),
+(33, 'Broccoli', 'West', 20, 2.00),
+(34, 'Cauliflower', 'North', 18, 2.10),
+(35, 'Spinach', 'South', 25, 1.90),
+(36, 'Potato', 'East', 28, 1.20),
+(37, 'Onion', 'West', 24, 1.10),
+(38, 'Garlic', 'North', 15, 2.50),
+(39, 'Cucumber', 'South', 20, 1.40),
+(40, 'Peas', 'East', 17, 1.60),
+(41, 'Corn', 'West', 19, 1.80),
+(42, 'Zucchini', 'North', 16, 1.90),
+(43, 'Eggplant', 'South', 21, 2.30),
+(44, 'Bell Pepper', 'East', 22, 2.40),
+(45, 'Mushroom', 'West', 18, 3.00),
+(46, 'Lettuce', 'North', 20, 1.70),
+(47, 'Celery', 'South', 15, 1.60);
+
+------------------------------------------------------------------------------
+Queries on Group By Clause  /havinfg/limit/where //aggregate function
+
+
+#1. Find the total quantity sold for each product.
+select product , sum(quantity) as "Total Product Quantity"
+from sales
+group by product limit 5;
+
+#2. Find products with total quantity sold more than 100.
+select product, sum(quantity) as "Total Sum"
+from sales
+group by product 
+having sum(quantity)>=45;
+
+#3. List regions ordered by total sales quantity in descending order.
+select region ,sum(quantity) as "Total_Sales" from sales
+group by region
+order by Total_Sales DESC; 
+
+#4. Get the top 3 products by total quantity sold.
+select product ,sum(quantity) as "Total_Sale"
+from sales
+group by product 
+LIMIT 3;
+
+#5. Find products with average price greater than 3.0.
+select product , avg(price) as "Total_Average" 
+from sales
+group by product
+ Having Total_Average>3.0;
+
+#6. List regions where total quantity sold is less than 50.
+select product , max(quantity) as "MAx_quantity", sum(quantity)  as "Total_Quantity"
+from sales
+group by product
+having Total_Quantity<50;
+select * from sales;
+
+#7. Find the total revenue per product (quantity * price) and order by revenue descending.
+select product ,sum(quantity * price) as "Total_Revenue"
+from sales
+group by product
+order by Total_Revenue desc;
+
+#8. Show the top 5 regions by total revenue.
+select product , sum(quantity*price) as "Total REvenue"
+from sales
+group by product
+limit 5;
+
+#9. Find the number of sales records per product.
+select product ,count(*) as "Number of Sale"
+from sales
+group by product;
+
+#10. Find products where the number of sales records is greater than 3.
+select product ,count(*) as "Sales_Product"
+from sales
+group by product
+HAving Sales_Product>=3;
+#11. List the average quantity sold per product, ordered by average quantity ascending.
+select product ,avg(quantity) as "Avg_quantity"
+from sales
+group by product
+order by  Avg_quantity ASC;
+
+#12. Find products with total quantity sold between 50 and 150.
+select product ,sum(quantity) as "Total_quantity"
+from sales
+group by product
+having Total_quantity between 0 and 50;
+
+#13. List regions with total sales count more than 10 and total quantity greater than 100.
+select region ,count(*) as "Total_sale",sum(quantity) as "Total_Quantity"
+from sales
+group by region
+having count(*)>0 and sum(quantity)>100;
+
+#14. Find the product with the lowest total quantity sold.
+select product,sum(quantity) As "Total_Sum_quantity"
+from sales
+group by product
+order by Total_Sum_quantity asc
+LIMIT 1;
+
+#15. Find the region with the highest average price per product.
+select region ,avg(price) as "Total_avg"
+from sales
+group by region
+order by Total_avg DESC LIMIT 1;
+
+
+#16. Find all products with total revenue greater than 200.
+select product , sum(quantity*price) as "Total_revenue"
+from sales
+group by product 
+having Total_revenue>50;
+
+#17. List the top 3 products by average quantity sold per sale.
+select product ,avg(quantity) as "TotalAvgQauntity"
+from sales
+group by product
+order by TotalAvgQauntity DESC
+LIMIT 3;
+
+#18. Find regions where average quantity sold per sale is less than 15.
+select region ,avg(quantity) as "avgqauntity"
+from sales
+group by region 
+having avg(quantity)>15;
+
+#19. List all products with more than 5 sales records, ordered by total quantity sold descending.
+select product, count(*) as "Total_Count",sum(quantity) as "Total_quantity"
+from sales
+group by product
+having count(*)<5
+order by Total_quantity desc;
+
+#20. Find the top 2 products by total quantity sold in the 'North' region.
+select region ,sum(quantity) as "Total_quantity"
+from sales where region='north'
+group by region
+order by Total_quantity DESC
+limit 2;
+
+
+
+
+
+
+
+
+
+
+
+

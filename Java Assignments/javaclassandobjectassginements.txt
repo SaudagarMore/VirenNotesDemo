@@ -1,0 +1,76 @@
+Use class And OBjects ,getter ,Setter Array Of Objects ToString()
+
+1:) Student Marks Analysis
+Create a Student class with: studentId, name, marks
+Tasks:
+Store 5 Student objects in an array.
+1)Find and display:
+2)Student with highest marks
+3)Student with lowest marks
+4)Display all students using toString().
+
+2:) Employee Salary Management
+Create an Employee class with: empId, name, salary
+Tasks:
+1)Store 10 employees in an array.
+2)Increase salary by 10% for employees earning less than 30,000.
+3)Display updated employee details using toString().
+
+3:) Bank Account System
+Create a BankAccount class with:accountNumber, holderName, balance
+Tasks:
+1)Store multiple accounts in an array.
+2)Deposit 5000 into accounts with balance less than 10,000.
+3)Display all account details.
+
+4:) Product Inventory
+Create a Product class with:productId, productName, price, quantity
+Tasks:
+1)Store products in an array.
+Find:
+i)Product with highest price
+ii)Product with lowest quantity
+iii)Print details using toString().
+
+5:) Library Book Management
+Create a Book class with:bookId, title, author, price
+Tasks:
+1)Store 5 books in an array.
+2)Apply 5% discount on books costing more than 500.
+3)Display updated book list.
+
+6:) Car Showroom
+Create a Car class with:carId, brand, price, mileage
+Tasks:
+1)Store cars in an array.
+2)Find the car with: Best mileage,Highest price
+3)Display all cars using toString().
+
+7:) College Course Registration
+Create a Course class with:courseId, courseName, duration, fees
+Tasks:
+1)Store courses in an array.
+2)Increase fees by 8% for courses with duration more than 6 months.
+3)Display updated course details.
+
+8:) Mobile Phone Store
+Create a Mobile class with:modelNo, brand, price, storage
+Tasks:
+1)Store mobiles in an array.
+2)Find all mobiles with storage >= 128GB.
+3)Print their details using toString().
+
+9:) Hospital Patient Records
+Create a Patient class with:patientId, name, age, billAmount
+Tasks:
+1)Store patients in an array.
+2)Give 15% discount to patients above 60 years.
+3)Display final bill details.
+
+10:) Company Department Report
+Create a Department class with:deptId, deptName, noOfEmployees, budget
+Tasks:
+1)Store departments in an array.
+2)Find department with:
+3)Maximum budget and 
+4)Minimum employees Display details using toString().

@@ -1,0 +1,146 @@
+Load Balancer
+
+What is a Load Balancer (Simple Definition)
+
+> A Load Balancer is like a traffic police that stands in front of your servers and distributes user requests evenly across them so no single server is overloaded.
+
+Why Do We Need a Load Balancer?
+
+Imagine you have:
+
+ A shopping website.
+ 1 server handling all customers.
+ During a sale, 10,000 users come at once — the server crashes!
+
+ Solution: Use multiple servers (e.g., EC2 instances)
+ But then: Who decides which server will handle which request?
+
+Answer: A Load Balancer
+
+---
+
+ How Load Balancer Works (Simple)
+
+1. Users send requests (from browser).
+2. The Load Balancer receives them.
+3. It checks the health of each backend server.
+4. It forwards the request to one of the healthy servers.
+5. The server sends the response back to the user via the load balancer.
+
+---
+
+Real-World Example on AWS
+
+Let’s do this practically using AWS Elastic Load Balancer (ELB).
+
+---
+
+ Step-by-Step: AWS Load Balancer Setup (with EC2s)
+
+ Setup:
+
+We’ll create:
+
+ 2 EC2 Instances (web servers)
+ 1 Application Load Balancer (ALB)
+
+---
+Step 1: Create 2 EC2 Instances
+
+1. Go to EC2 → Launch Instances
+2. Use Amazon Linux 2
+3. Create 2 instances:
+
+   WebServer1
+   WebServer2
+4. In User Data, add different simple HTML pages:
+
+WebServer1
+
+```bash
+#!/bin/bash
+echo "<h1>Welcome to Server 1</h1>" > /var/www/html/index.html
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+```
+
+WebServer2
+
+```bash
+#!/bin/bash
+echo "<h1>Welcome to Server 2</h1>" > /var/www/html/index.html
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+```
+
+---
+
+🔹 Step 2: Create a Target Group
+
+1. Go to EC2 → Target Groups → Create Target Group
+2. Choose:
+
+   Type: Instances
+   Name: `my-target-group`
+   Protocol: HTTP, Port: 80
+3. Register WebServer1 and WebServer2 into this target group.
+4. Health check path: `/`
+
+---
+
+🔹 Step 3: Create Load Balancer
+
+1. Go to EC2 → Load Balancers → Create Load Balancer
+2. Choose Application Load Balancer
+3. Name: `my-alb`
+4. Scheme: internet-facing
+5. Listeners: HTTP (Port 80)
+6. Availability Zones: Select the ones where your EC2s are
+7. Choose your security group (allow HTTP 80)
+8. In Target Group, select `my-target-group`
+
+---
+
+ Step 4: Test Load Balancer
+
+1. Copy the DNS name of the Load Balancer (from ALB dashboard).
+2. Paste it in your browser.
+
+You should see:
+
+Sometimes "Welcome to Server 1"
+Sometimes "Welcome to Server 2"
+
+Load Balancing 
+ Types of Load Balancers in AWS
+
+| Type                                | Use                                             |
+| ----------------------------------- | ----------------------------------------------- |
+| Application Load Balancer (ALB)| Best for web apps (Layer 7 - HTTP/HTTPS)        |
+| Network Load Balancer (NLB)    | High-performance (Layer 4 - TCP/UDP)            |
+| Gateway Load Balancer (GLB)     | For 3rd-party firewalls, deep packet inspection |
+
+---
+
+Health Checks
+
+Load Balancer checks if your backend servers are healthy using:
+
+Path: e.g., `/`
+Protocol: HTTP
+If a server is unhealthy, it stops sending traffic to it.
+
+---
+
+Summary
+
+| Concept       | Simple Meaning                          |
+| ------------- | --------------------------------------- |
+| Load Balancer | Distributes traffic to multiple servers |
+| ALB           | Works for web-based traffic             |
+| Target Group  | Group of backend servers                |
+| Health Check  | Keeps only healthy servers in rotation  |
+
+

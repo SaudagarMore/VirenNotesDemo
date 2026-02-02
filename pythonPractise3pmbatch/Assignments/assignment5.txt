@@ -1,0 +1,33 @@
+1. Count Vowels and Consonants
+Write a program to count the number of vowels and consonants in a string.
+Input: "Java"
+Output: Vowels: 2, Consonants: 2
+
+2. Remove All White Spaces
+: Write a program to remove all white spaces from a string.
+Input: "Java is fun"
+Output: "Javaisfun"
+
+3 Count Occurrences of a Character
+ Write a Java program to count how many times a particular character appears in a string.
+Input: "banana", char = 'a'
+Output: 3
+
+4 Compare Two Strings (Case Insensitive)
+ Write a Java program to compare two strings, ignoring case.
+Input: "Hello" and "hello"
+Output: Strings are equal
+
+5 Find the Largest Word in a Sentence
+ Write a program to find the longest word in a given sentence.
+Input: "Java is powerful"
+Output: "powerful"
+
+6. Replace All Occurrences of a Substring
+ Write a Java program to replace all occurrences of "Java" with "Python" in a string.
+Input: "Java is Java"
+Output: "Python is Python"
+
+7. Convert String to Character Array
+ Write a program that converts a string into a character array and prints each character.
+Input: "Code"

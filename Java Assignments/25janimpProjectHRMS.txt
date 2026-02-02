@@ -1,0 +1,410 @@
+http://localhost:8081/api/leaveAssignment/getLeavesByEmp?employeeId=EMP001
+http://localhost:8081/api/leaveAssignment/getLeavesByEmp
+Params:
+employeeId → EMP001
+
+3️.If you are BUILDING this API (Spring Boot example)
+Controller
+@RestController
+@RequestMapping("/api/leaveAssignment")
+public class LeaveAssignmentController {
+
+    @GetMapping("/getLeavesByEmp")
+    public List<Leave> getLeavesByEmp(@RequestParam String employeeId) {
+        return leaveService.getLeavesByEmployeeId(employeeId);
+    }
+}
+Service
+public List<Leave> getLeavesByEmployeeId(String employeeId) {
+    return leaveRepository.findByEmployeeId(employeeId);
+}
+
+GET /api/leaveAssignment/getLeavesByEmp?employeeId=EMP001
+Below is the clean, correct Spring Boot way to implement it.
+
+1️⃣ Controller (MOST IMPORTANT)
+@RestController
+@RequestMapping("/api/leaveAssignment")
+public class LeaveAssignmentController {
+
+    @Autowired
+    private LeaveAssignmentService leaveAssignmentService;
+
+    @GetMapping("/getLeavesByEmp")
+    public ResponseEntity<?> getLeavesByEmp(
+            @RequestParam("employeeId") String employeeId) {
+
+        return ResponseEntity.ok(
+                leaveAssignmentService.getLeavesByEmployeeId(employeeId)
+        );
+    }
+}
+✔ Uses @RequestParam
+✔ Matches your URL exactly
+✔ Returns JSON
+
+2️.Service Layer
+@Service
+public class LeaveAssignmentService {
+
+    @Autowired
+    private LeaveAssignmentRepository leaveAssignmentRepository;
+
+    public List<LeaveAssignment> getLeavesByEmployeeId(String employeeId) {
+        return leaveAssignmentRepository.findByEmployeeId(employeeId);
+    }
+}
+3️.Repository Layer (JPA)
+@Repository
+public interface LeaveAssignmentRepository
+        extends JpaRepository<LeaveAssignment, Long> {
+
+    List<LeaveAssignment> findByEmployeeId(String employeeId);
+}
+Spring Data JPA will auto-generate the query 👌
+
+4️.Entity Example
+@Entity
+@Table(name = "leave_assignment")
+public class LeaveAssignment {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "employee_id")
+    private String employeeId;
+   @Column(name = "leave_type")
+    private String leaveType;
+    @Column(name = "leave_days")
+    private int leaveDays;
+    // getters & setters
+}
+http://localhost:8081/api/leaveAssignment/getLeavesByEmp?employeeId=EMP001
+Expected JSON
+[
+  {
+    "id": 1,
+    "employeeId": "EMP001",
+    "leaveType": "CASUAL",
+    "leaveDays": 5
+  }
+]
+http://localhost:8081/api/holidays/addHolidaya
+http://localhost:8081/api/holidays/getAllHolidays solve this to same
+
+POST /api/holidays/addHolidaya
+GET  /api/holidays/getAllHolidays
+Below is the correct + consistent Spring Boot solution.
+
+1️.Holiday Controller
+@RestController
+@RequestMapping("/api/holidays")
+public class HolidayController {
+    @Autowired
+    private HolidayService holidayService;
+    // ADD HOLIDAY
+    @PostMapping("/addHolidaya")
+    public ResponseEntity<Holiday> addHoliday(@RequestBody Holiday holiday) {
+        Holiday savedHoliday = holidayService.addHoliday(holiday);
+        return ResponseEntity.ok(savedHoliday);
+    }
+    // GET ALL HOLIDAYS
+    @GetMapping("/getAllHolidays")
+    public ResponseEntity<List<Holiday>> getAllHolidays() {
+        return ResponseEntity.ok(holidayService.getAllHolidays());
+    }
+}
+2️.Holiday Service
+@Service
+public class HolidayService {
+    @Autowired
+    private HolidayRepository holidayRepository;
+    public Holiday addHoliday(Holiday holiday) {
+        return holidayRepository.save(holiday);
+    }
+    public List<Holiday> getAllHolidays() {
+        return holidayRepository.findAll();
+    }
+}
+3️. Holiday Repository
+@Repository
+public interface HolidayRepository extends JpaRepository<Holiday, Long> {
+}
+No extra code needed 👍
+
+4️.Holiday Entity Example
+@Entity
+@Table(name = "holidays")
+public class Holiday {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "holiday_name")
+    private String holidayName;
+    @Column(name = "holiday_date")
+    private LocalDate holidayDate;
+    @Column(name = "description")
+    private String description;
+    // getters & setters
+}
+5️.Test the APIs
+➕ Add Holiday (POST) URL
+http://localhost:8081/api/holidays/addHolidaya
+Body (JSON)
+
+{
+  "holidayName": "Republic Day",
+  "holidayDate": "2026-01-26",
+  "description": "National Holiday"
+}
+📋 Get All Holidays (GET)
+http://localhost:8081/api/holidays/getAllHolidays
+Response
+[
+  {
+    "id": 1,
+    "holidayName": "Republic Day",
+    "holidayDate": "2026-01-26",
+    "description": "National Holiday"
+  }
+]
+
+POST /api/holidays
+GET  /api/holidays
+✅ Validation (@NotNull, @NotBlank)
+✅ DTO + Mapper
+✅ Exception handling
+
+http://localhost:8081/api/holidays/nextHoliday
+GET /api/holidays/nextHoliday
+
+1️.Controller
+@RestController
+@RequestMapping("/api/holidays")
+public class HolidayController {
+
+    @Autowired
+    private HolidayService holidayService;
+
+    @GetMapping("/nextHoliday")
+    public ResponseEntity<Holiday> getNextHoliday() {
+        return ResponseEntity.ok(holidayService.getNextHoliday());
+    }
+}
+2️.Service
+@Service
+public class HolidayService {
+
+    @Autowired
+    private HolidayRepository holidayRepository;
+
+    public Holiday getNextHoliday() {
+        return holidayRepository
+                .findFirstByHolidayDateAfterOrderByHolidayDateAsc(LocalDate.now())
+                .orElseThrow(() -> new RuntimeException("No upcoming holidays found"));
+    }
+}
+3️.Repository (IMPORTANT PART)
+@Repository
+public interface HolidayRepository extends JpaRepository<Holiday, Long> {
+    Optional<Holiday> findFirstByHolidayDateAfterOrderByHolidayDateAsc(LocalDate date);
+}
+Spring Data JPA auto-generates this query 👌
+No JPQL needed.
+
+4️.Entity (Reminder)
+@Entity
+@Table(name = "holidays")
+public class Holiday {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String holidayName;
+   private LocalDate holidayDate;
+    private String description;
+    // getters & setters
+}
+5️.Test the API
+Request
+GET http://localhost:8081/api/holidays/nextHoliday
+Response
+{
+  "id": 3,
+  "holidayName": "Independence Day",
+  "holidayDate": "2026-08-15",
+  "description": "National Holiday"
+}
+6️.Common Issues & Fixes
+❌ Error: No upcoming holidays found
+👉 Means no future dates in DB
+👉 Insert at least one holiday with date > today
+
+❌ Wrong holiday returned
+👉 Check DB dates
+👉 Must be DATE type (not VARCHAR)
+
+7️.Optional Enhancements (Best Practice)
+Return DTO
+Custom exception (HolidayNotFoundException)
+Timezone support
+Return next N holidays
+If you want, I can also give you:
+🔹 /upcomingHolidays
+🔹 /holidaysByYear
+🔹 /isHoliday?date=YYYY-MM-DD
+Just tell me.
+You said:
+26)Sign in ( POST method )
+http://localhost:8081/api/attendance/signIn
+Parameters
+{
+"signInId": "B0005557",
+"employeeId": "EMP008",
+"signInTime": "09:01:32 AM",
+"signInLocation": "Baner, Pune",
+"currentDate": "2025-01-13",
+"isSignIn": "true",
+"isLateIn": 0,
+"isFirstIn": 1
+}
+
+27)
+Sign out ( POST Method )
+http://localhost:8081/api/attendance/signOut
+{
+"employeeId": "EMP008",
+"signOutTime": "07:20:45 PM",
+"signOutLocation": "Baner, Pune",
+"currentDate": "2025-01-10",
+"isSignOut": "true",
+"isLateOut": 1,
+"isFirstOut": 0
+}
+
+✅ REQUIREMENTS UNDERSTOOD
+1️.Attendance Entity
+@Entity
+@Table(name = "attendance")
+public class Attendance {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true)
+    private String signInId;
+
+    private String employeeId;
+
+    private LocalDate currentDate;
+
+    private LocalTime signInTime;
+    private String signInLocation;
+    private boolean isSignIn;
+    private int isLateIn;
+    private int isFirstIn;
+
+    private LocalTime signOutTime;
+    private String signOutLocation;
+    private boolean isSignOut;
+    private int isLateOut;
+    private int isFirstOut;
+
+    // getters & setters
+}
+
+2️.Repository
+@Repository
+public interface AttendanceRepository extends JpaRepository<Attendance, Long> {
+   Optional<Attendance> findByEmployeeIdAndCurrentDate(String employeeId, LocalDate currentDate);
+    boolean existsBySignInId(String signInId);
+}
+3️.Service (CORE LOGIC)
+🔹 Generate Unique Random SignIn ID
+@Service
+public class AttendanceService {
+    @Autowired
+    private AttendanceRepository attendanceRepository;
+    private String generateUniqueSignInId() {
+        String signInId;
+        do {
+            signInId = "B" + UUID.randomUUID().toString().substring(0, 7).toUpperCase();
+        } while (attendanceRepository.existsBySignInId(signInId));
+
+        return signInId;
+    }
+🔹 SIGN IN Logic
+    public void signIn(Attendance attendance) {
+        attendance.setSignInId(generateUniqueSignInId());
+        attendanceRepository.save(attendance);
+    }
+🔹 SIGN OUT Logic
+    public void signOut(Attendance signOutRequest) {
+
+        Attendance attendance = attendanceRepository
+                .findByEmployeeIdAndCurrentDate(
+                        signOutRequest.getEmployeeId(),
+                        signOutRequest.getCurrentDate())
+                .orElseThrow(() -> new RuntimeException("SignIn not found"));
+
+        attendance.setSignOutTime(signOutRequest.getSignOutTime());
+        attendance.setSignOutLocation(signOutRequest.getSignOutLocation());
+        attendance.setIsSignOut(signOutRequest.isIsSignOut());
+        attendance.setIsLateOut(signOutRequest.getIsLateOut());
+        attendance.setIsFirstOut(signOutRequest.getIsFirstOut());
+
+        attendanceRepository.save(attendance);
+    }
+}
+4️.Controller
+@RestController
+@RequestMapping("/api/attendance")
+public class AttendanceController {
+    @Autowired
+    private AttendanceService attendanceService;
+    // SIGN IN
+    @PostMapping("/signIn")
+    public ResponseEntity<String> signIn(@RequestBody Attendance attendance) {
+        try {
+            attendanceService.signIn(attendance);
+            return ResponseEntity.status(HttpStatus.CREATED)
+                    .body("SignIn successfully!");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Failed to add SignIn data.");
+        }
+    }
+    // SIGN OUT
+    @PostMapping("/signOut")
+    public ResponseEntity<String> signOut(@RequestBody Attendance attendance) {
+        try {
+            attendanceService.signOut(attendance);
+            return ResponseEntity.status(HttpStatus.CREATED)
+                    .body("SignOut successfully!");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Failed to add SignOut data.");
+        }
+   }
+}
+5️.JSON REQUESTS
+🔹 Sign In
+{
+  "employeeId": "EMP008",
+  "signInTime": "09:01:32",
+  "signInLocation": "Baner, Pune",
+  "currentDate": "2025-01-13",
+  "isSignIn": true,
+  "isLateIn": 0,
+  "isFirstIn": 1
+}
+
+🔹 Sign Out
+{
+  "employeeId": "EMP008",
+  "signOutTime": "19:20:45",
+  "signOutLocation": "Baner, Pune",
+  "currentDate": "2025-01-13",
+  "isSignOut": true,
+  "isLateOut": 1,
+  "isFirstOut": 0
+}

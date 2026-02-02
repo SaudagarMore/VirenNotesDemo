@@ -1,0 +1,218 @@
+Layout.jsx
+-------------------
+
+main.jsx
+----------------
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App.jsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+)
+----------------------------
+App.jsx
+----------------
+import React from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import Layout from './components/Layout.jsx'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
+import Feedback from './pages/Feedback.jsx'
+import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
+import UserTable from './pages/DisplayDetails.jsx'
+
+export default function App() {
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="feedback" element={<Feedback />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        { <Route path='display' element={<UserTable/>} /> }
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
+  )
+}
+-------------
+storage.js
+-------------
+export const getJSON = (key, fallback) => {
+  try {
+    const raw = localStorage.getItem(key)
+    return raw ? JSON.parse(raw) : fallback
+  } catch (e) {
+    return fallback
+  }
+}
+
+export const setJSON = (key, value) => {
+  localStorage.setItem(key, JSON.stringify(value))
+}
+
+export const removeItem = (key) => {
+  localStorage.removeItem(key)
+}
+---------------
+Register.jsx
+---------------
+export default function Register() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const navigate = useNavigate()
+
+ return (
+    <section className="auth-card">
+      <h1>Register</h1>
+      <form onSubmit={submit} className="form">
+        {error && <p className="error">{error}</p>}
+        <label>Name<input value={name} onChange={e => setName(e.target.value)} required /></label>
+        <label>Email<input type="email" value={email} onChange={e => setEmail(e.target.value)} required /></label>
+        <label>Password<input type="password" value={password} onChange={e => setPassword(e.target.value)} required /></label>
+        <button className="btn btn-primary" type="submit">Create account</button>
+      </form>
+    </section>
+  )
+}
+--------------
+Login.jsx
+--------------
+export default function Login() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+
+  return (
+    <section className="auth-card">
+      <h1>Login</h1>
+      <form onSubmit={submit} className="form">
+        {error && <p className="error">{error}</p>}
+        <label>Email<input type="email" value={email} onChange={e=>setEmail(e.target.value)} required /></label>
+        <label>Password<input type="password" value={password} onChange={e=>setPassword(e.target.value)} required /></label>
+        <button className="btn btn-primary" type="submit">Login</button>
+      </form>
+    </section>
+  )
+}
+------------
+Home.jsx
+------------
+export default function Home() {
+  const [user, setUser] = useState(null)
+  return (
+    <section>
+      <h1>Welcome {user ? user.name : 'to the App'} 👋</h1>
+      <p>This is a simple React + Vite single-page application with localStorage auth.</p>
+      <ul>
+        <li>Register → stored in <code>localStorage</code></li>
+        <li>Login → redirects back to Home</li>
+        <li>Master layout with navigation on top</li>
+      </ul>
+    </section>
+  )
+}
+-------------
+Feedback.jsx
+-------------
+export default function Feedback() {
+  const [form, setForm] = useState({ rating: '5', comment: '' })
+
+  return (
+    <section>
+      <h1>Feedback</h1>
+      <form onSubmit={submit} className="form">
+        <label>
+          Rating
+          <select value={form.rating} onChange={e=>setForm({...form, rating:e.target.value})}>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </label>
+        <label>
+          Comment
+          <textarea rows="3" value={form.comment} onChange={e=>setForm({...form, comment:e.target.value})} />
+        </label>
+        <button className="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </section>
+  )
+}
+-------------
+contact.jsx
+-------------
+export default function Contact() {
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  return (
+    <section>
+      <h1>Contact</h1>
+      <form onSubmit={submit} className="form">
+        <label>
+          Name
+          <input value={form.name} onChange={e=>setForm({...form, name:e.target.value})} required />
+        </label>
+        <label>
+          Email
+          <input type="email" value={form.email} onChange={e=>setForm({...form, email:e.target.value})} required />
+        </label>
+        <label>
+          Message
+          <textarea rows="4" value={form.message} onChange={e=>setForm({...form, message:e.target.value})} required />
+        </label>
+        <button className="btn btn-primary" type="submit">Send</button>
+      </form>
+    </section>
+  )
+}
+------------
+About.jsx
+------------
+export default function About() {
+  return (
+    <section>
+      <h1>About</h1>
+      <p>Demo project showing authentication and page routing using React Router and localStorage.</p>
+    </section>
+  )
+}
+---------
+index.css
+----------------
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, 'Apple Color Emoji',
+ 'Segoe UI Emoji'; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f7fb; color: #111827; }
+.container { max-width: 1000px; margin: 0 auto; padding: 16px; }
+.header { position: sticky; top: 0; backdrop-filter: blur(8px); background:#ffffffcc; border-bottom: 1px solid #e5e7eb; }
+.nav { display:flex; align-items:center; gap:16px; }
+.brand { font-weight: 700; text-decoration:none; color:#111827; }
+.links { display:flex; gap:12px; margin-left: auto; }
+.links a { text-decoration:none; color:#374151; padding:8px 10px; border-radius:8px; }
+.links a.active { background:#111827; color:#fff; }
+.auth { display:flex; align-items:center; gap:8px; }
+.btn { border:1px solid #e5e7eb; background:#fff; padding:8px 12px; border-radius:8px; cursor:pointer; text-decoration:none; color:#111827; }
+.btn-primary { background:#111827; color:#fff; border-color:#111827; }
+main { min-height: calc(100vh - 140px); }
+.footer { border-top:1px solid #e5e7eb; background:#fff; }
+.form { display:grid; gap:12px; max-width:420px; }
+.form label { display:grid; gap:6px; font-size:14px; }
+.form input, .form textarea, .form select { padding:10px 12px; border-radius:8px; border:1px solid #d1d5db; outline:none; }
+.form input:focus, .form textarea:focus, .form select:focus { border-color:#111827; box-shadow: 0 0 0 3px #11182722; }
+.error { background:#fee2e2; color:#991b1b; padding:8px 10px; border-radius:8px; }
+.auth-card { max-width:520px; }
+.welcome { color:#374151; margin-right:8px; }

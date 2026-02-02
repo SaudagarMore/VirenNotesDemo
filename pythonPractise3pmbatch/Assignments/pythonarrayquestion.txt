@@ -1,0 +1,39 @@
+1)Create an empty Array and append five integers entered by the user. Print the final Array 
+
+2)Given the Array arr = [1, 3, 5], use insert() to add number 2 at index 1. Print the updated Array 
+
+3)Write a program to take 5 integers from the user and store them in a Array Then use extend() to add [100, 200] to the Array Print the result.
+
+4)Given the list arr = [2, 4, 6, 8, 4], remove the first occurrence of 4 using remove(). Print the updated Array 
+
+5)Take a Array of 5 numbers from the user and then use pop() to remove the last element. Print the removed element and the remaining Array .
+
+6)Create a Array of 5 items entered by the user, then use clear() to empty the list. Print the Array before and after clearing.
+
+7)Given arr = [5, 10, 15, 20], take a number from the user and print its index using index() method.
+
+8)Write a program to count how many times the number 3 appears in the list arr = [1, 3, 3, 5, 3, 7].
+
+9)Take a Array of 6 numbers from the user and sort them in ascending order using sort(). Print the sorted list.
+
+10)Reverse the Array [1, 2, 3, 4, 5] using reverse() and print the result.
+
+11)Write a program that takes a Array  size and values from the user and prints its length using __len__() method.
+
+12) Given arr = ['a', 'b', 'c', 'd'], use __getitem__() to print the element at index 2.
+
+13)Create a list arr = [0, 0, 0, 0], then use __setitem__() to set index 2 to 10. Print the updated Array 
+
+14)Take a Array of 5 elements from the user, then use __delitem__() to delete the element at index 1. Print the updated Array 
+
+15)Given Array = [10, 20, 30, 40], use __contains__() to check whether the user-provided number exists in the Array 
+
+16)Create a Array and use __iter__() to iterate and print all elements.
+
+17)Write a program that takes 5 numbers, adds them to a Array using append(), and then removes all elements greater than 10.
+
+18)Given the arr = [7, 2, 9, 4], sort the list, then reverse it, and finally print the second-largest number using __getitem__().
+
+19)Take 6 numbers from the user and store them in a Array Then check how many times the last entered number appears using count() and print a message based on the count (e.g., if >1, say "Duplicate Found").
+
+20)Take a Array of 8 numbers from the user. Sort it, remove the smallest number using pop(0), and print the remaining Array .

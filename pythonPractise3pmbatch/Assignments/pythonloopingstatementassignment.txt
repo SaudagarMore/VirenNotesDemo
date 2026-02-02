@@ -1,0 +1,20 @@
+1)Print numbers from 1 to 10 using a for loop.
+2)Take an integer N from the user and find the sum of first N natural numbers using a while loop.
+3)Take a number from the user and print its multiplication table up to 10 using a for loop.
+4)Create a countdown timer from 10 to 1 using a while loop.
+5)Take a number from the user and calculate its factorial using a for loop.
+6)Display the first 10 Fibonacci numbers using a while loop.
+7)Take a string from the user and print all characters.
+8)Take a number from the user and find the sum of its even digits using a while loop.
+9)Take a number from the user and check if it is a palindrome by reversing it using a loop.
+10)Print odd numbers in reverse order from 99 to 1 using a for loop.
+11)Print a triangle pattern of stars using nested for loops.
+12)Take a list of numbers from the user and search for an element using a for loop (without break).
+13)Print even numbers between 1 and 50, skipping odd numbers using continue.
+14)Take user input repeatedly in a loop and break if the user enters 0.
+15)Find the first number between 1 and 100 divisible by both 3 and 7, then break the loop.
+16)Print numbers from 1 to 50, skipping multiples of 5 using continue.
+17)Loop through numbers 1 to 10 and use pass when the number is 5.
+18)Take a number from the user and check if it is prime using a loop and break when divisible.
+19)Create a guessing game where the user guesses a random number, breaking the loop when guessed correctly.
+2)Create an infinite loop that asks for user input, uses pass for empty input, and breaks if input is "exit"

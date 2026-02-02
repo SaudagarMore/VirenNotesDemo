@@ -1,0 +1,50 @@
+Core Java:
+1. Why can't a smaller type of variable store a larger type of data? How can the compiler be forced to do so?
+2. What is the difference between a switch statement and else-if ladder?
+3. What are the two different ways to start an infinite loop? Write the output of the code below:
+   class Demo {
+	   public static void main(String[] args) {
+		   while(true) {
+		   		System.out.println("Hello world");
+		   }
+		   System.out.println("Code end");
+	   }
+   }
+4. What are the functions of the 'new' keyword? How does the 'new' keyword behave as an operator?
+5. How to differentiate between a method and a constructor?
+6. If a variable is made private, where all can it be accessed?
+7. What are the two key factors for the Child class inheriting the attributes and the actions from the Parent class?
+8. Explain with an example how Multiple inheritance is achieved in Java. 
+9. class Demo {
+		public static void main(String[] args) } {
+			Child c = new Parent();
+		}
+   	}
+   	Assuming there are Parent and Child class already present, what will be the output of the code above?
+10. Why is a String object considered immutable? Prove the immutability of a String object using an example.
+11. What are the advantages of Collection interface over an Array?
+12. Suppose you want to store the data of students in a data structure, which data structure would you choose and why?
+13. Assume there is a blueprint of an Employee. What needs to be done to create a TreeSet object where the generic type is Employee?
+14. How is a Map interface different from the Collection interface? 
+15. When can a Lambda function be used? Explain with an example.
+16. Assume there is an interface named as Inter which has 2 abstract methods demo() and hello(). How can I give implementation
+to there 2 methods without creating an implementation class. Type the code below.
+17. Using streams and built-in functional interfaces, square all the Prime numbers from a List of integers and store then in another List.
+18. What is the difference between a Checked and an Unchecked exception?
+19. Create a checked exception called as IdNotFoundException() and show how it can be handled in a Controller class.
+20. What is the difference between an exception and an error? What causes an error in java?
+
+Advanced Java:
+1. What is the difference between the 'where' and the 'having' clause?
+2. What is the use of a Cross join?
+3. How is the '=' operator different from the 'IN' operator?
+4. What is the difference between Inner join and Self join?
+5. What are the 5 steps involved in JDBC and which step is not mandatory but is highly recommended?
+6. What happens when a incomplete object is sent to the merge() method in hibernate?
+7. List<Employee> list = new ArrayList();
+	manager.persist(list);
+	Is the above possible? Explain your answer.
+8. How is the connection established between multiple tables in Hibernate?
+9. How does Postman know which class to communicate with in Springboot?
+10. Why is the save() method from the JpaRepository polymorphic in nature?
+

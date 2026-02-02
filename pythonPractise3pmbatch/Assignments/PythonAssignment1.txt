@@ -1,0 +1,40 @@
+1. Question:Write a Python program to take the following input from the user for an employee:
+Employee ID
+Name
+Salary
+Department
+Whether the employee is permanent (True/False)
+Then display all the collected information.
+
+2. Question:Create a Python script that asks the user to input the following product details:
+Product name
+Product ID
+Price
+Quantity in stock
+Supplier rating (in complex number format)
+Print all the details nicely formatted.
+
+3.Question:Write a Python program that takes the following input for a book:
+Book title
+Author
+Number of pages
+Price
+Is it available as an eBook? (True/False)
+Then print a summary of the book.
+
+4.Question:Create a Python program to record patient information. Collect the following:
+Patient ID
+Name
+Age
+Body temperature
+Blood pressure (as a complex value)
+Has any allergies? (True/False)
+Display the patient report.
+
+5.Question:Write a program to input details of a car for an inventory system:
+Car model
+Manufacturing year
+Price
+Is it an electric vehicle? (True/False)
+Engine code (as a complex value)
+Print the car details in a readable format.

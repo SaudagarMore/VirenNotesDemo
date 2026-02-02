@@ -1,0 +1,17 @@
+1)Given arr = [1, 2, 3, 4, 5], write a program to replace every even-indexed item with 0 using __setitem__().
+
+2)Ask the user for 5 Integers and store them in a list.and then store into empty array Then count and print take a number from user and find that number is
+present or not into that array and if found print the occurance of that numers how many times that appears.
+
+3)Create a arr = [10, 20, 30, 40, 50]. Use slicing and __getitem__() to print the last three items.
+
+4)Take a array from the user and use __contains__() to filter record from array and and Print how many numbers are divisible by 4 in array
+
+5)Given a array of 10 integers, remove all even numbers using a loop and remove() method. Print the updated array.
+
+6)Create two array using user input. Extend the first array with the second using extend(), then sort it and print the result.
+
+7)Given arr = [5, 3, 9, 1], sort it, then reverse it, then use __getitem__() to find and print the third-largest element.
+
+8)Write a program that creates a array of 10 random integers from 1 to 50. Use __iter__() to iterate and print only values greater than 25.
+

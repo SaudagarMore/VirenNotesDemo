@@ -1,0 +1,190 @@
+1.Given an integer U denoting the amount of KWh units of electricity consumed, the task is to calculate the electricity bill with the help of the below charges: 
+·      1 to 100 units – Rs. 10/unit
+·      100 to 200 units – Rs. 15/unit
+·      200 to 300 units – Rs. 20/unit
+·      above 300 units – Rs. 25/unit
+Input: U = 250 
+Output: 3500 
+(Solve Carefully first Understand problem)
+
+2.Write a program in Java to accept the name of an employee and his/her annual income. Pass the name and the annual income. Displays the name of the employee and the income tax as per the given tariff:
+Annual Income
+Income Tax
+Up to ₹2,50,000
+                                No tax
+₹2,50,001 to ₹5,00,000
+                        10% of the income exceeding ₹2,50,000
+₹5,00,001 to ₹10,00,000
+                      ₹30,000 + 20% of the amount exceeding ₹5,00,000
+₹10,00,001 and above
+                     ₹50,000 + 30% of the amount exceeding ₹10,00,000
+-------------------------------------------------------------------------------------
+3. Develop a Java program that calculates the Basal Metabolic Rate (BMR) and Body Mass Index (BMI) for an individual based on their gender, weight, height, and age. The program should then determine and report whether the individual is 
+underweight, healthy, overweight, or obese based on their BMI.
+BMI Calculation:
+Convert height from centimeters to meters.
+Use the formula BMI = weight / (height in meters * height in meters) to calculate BMI.
+BMI Classification:
+Based on the calculated BMI, classify the individual into the following categories:
+Underweight: BMI < 18.5
+Healthy: 18.5 ≤ BMI < 24.9
+Overweight: 25 ≤ BMI < 29.9
+Obese: BMI ≥ 30
+4.create given pattern
+1
+121
+12321
+1234321
+--------------------------------------------------------------------
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 4; // You can change this to generate more rows
+
+        for (int i = 1; i <= rows; i++) {
+            // Print increasing numbers from 1 to i
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+
+            // Print decreasing numbers from i-1 to 1
+            for (int j = i - 1; j >= 1; j--) {
+                System.out.print(j);
+            }
+
+            // Move to the next line
+            System.out.println();
+        }
+    }
+}
+-----------------------------------------------------------------
+1.Create a parent class called "Vehicle" with attributes such as brand, model, year, and a method called "drive". Create a child class called "Car" that inherits from Vehicle and has an additional attribute called "color" and a method called "honk". Create an object of the Car class and call both the "drive" and "honk" methods. 
+2.Create a parent class called "Person" with attributes such as name, age, and a method called "speak". Create a child class called "Student" that inherits from Person and has an additional attribute called "grade" and a method called "study". Create an object of the Student class and call both the "speak" and "study" methods.
+3.Design a class named ShowRoom with the following description: Instance variables/data members:
+String name: to store the name of the customer.
+ long mobno: to store the mobile number of the customer.
+double cost: to store the cost of the items purchased. double dis: to store the discount amount.
+double amount: to store the amount to be paid after discount.
+Member methods:
+ ShowRoom(): default constructor to initialize data members.
+void input(): to input customer name, mobile number, cost.
+void calculate(): to calculate discount on the cost of purchased items, based on the following criteria:
+COST                                                         DISCOUNT (IN PERCENTAGE) <=to Rs. 10000                                                5%
+> Rs. 10000 <=Rs. 20000                             10%
+> Rs. 20000 <= Rs. 35000                           15%
+> Rs. 35000 20%
+ void display(): to display customer name, mobile number, amount to be paid after discount.
+ Write a main() method to create an object of the class and call the above member methods.
+-----------------------------------------------------------------
+Exercise 1:
+Create a base class Item with the following properties:
+String title
+String publisher
+int publicationYear
+Add a constructor to initialize these properties and a method displayInfo() that prints the title, publisher, and publication year.
+Create a derived class Book that inherits from Item and adds the following properties:
+String author
+int numberOfPages
+Add a constructor to initialize the Book class properties, and override the displayInfo() method to include the author and number of pages.
+Create a main method to instantiate objects of Book  and call their displayInfo() methods.
+Create an abstract class Employee with the following abstract methods:
+double calculateSalary()
+void displayDetails()
+Create a derived class FullTimeEmployee that extends Employee and implements the following:
+Properties double baseSalary and double benefits
+A constructor to initialize the properties
+Implement the calculateSalary() method to return the total salary (base salary + benefits)
+Implement the displayDetails() method to print the details of the full-time employee
+Create another derived class PartTimeEmployee that extends Employee and implements the following:
+Properties double hourlyRate and int hoursWorked
+A constructor to initialize the properties
+Implement the calculateSalary() method to return the total salary (hourly rate * hours worked)
+Implement the displayDetails() method to print the details of the part-time employee
+Create a main method to instantiate objects of FullTimeEmployee and PartTimeEmployee, and print their details and calculated salaries.
+
+Exercise 3: Create an interface PaymentMethod with the following methods:
+void makePayment(double amount)
+void printReceipt()
+Create a class CreditCardPayment that implements PaymentMethod and provides the following implementations:
+makePayment() method that prints "Payment of [amount] made using Credit Card."
+printReceipt() method that prints "Credit Card Payment Receipt."
+Create another class PayPalPayment that implements PaymentMethod and provides the following implementations:
+makePayment() method that prints "Payment of [amount] made using PayPal."
+printReceipt() method that prints "PayPal Payment Receipt."
+Create a main method to do the following:
+Instantiate objects of CreditCardPayment and PayPalPayment
+Create an array of PaymentMethod and store the CreditCardPayment and PayPalPayment objects in it
+Use a loop to iterate over the array and call the makePayment() and printReceipt() methods on each object to demonstrate polymorphism
+------------------------------------------------------------------------------
+Q.1 Create a class named 'Student' with String variable 'name' and integer variable 'roll_no'. Assign the value of roll_no as '2' and that of name as "John" by creating an object of the class Student.
+Q.2  Assign and print the roll number, phone number and address of two students having names "Sam" and "John" respectively by creating two objects of class 'Student'.
+Q.3 Print the average of three numbers entered by user by creating a class named 'Average' having a method to calculate and print the average.
+Q.4 Write a program that would print the information (name, year of joining, salary, address) of three employees by creating a class named 'Employee'. The output should be as follows:
+Name        Year of joining        Address
+Robert            1994                64C- WallsStreat
+Sam                2000                68D- WallsStreat
+John                1999                26B- WallsStreat
+------------------------------------------------------------------------------
+1.  Write a program to enter P,T  and calculate simple interest. 
+2.  Write a program which calculates the monthly bill amount for EB
+3.  Write a program to calculate area of Rectangle, Square, Circle and Triangle using constructor overloading.
+---------------------------------------------------------------------------------------------
+1.Create an interface called "BankAccount" with methods called "deposit" and "withdraw". Create a class called "CheckingAccount" that implements the BankAccount interface and implements the "deposit" and "withdraw" methods. Create an object of the CheckingAccount class and call both the "deposit" and "withdraw" methods.
+2.Write a Java program to create an interface Resizable with methods resizeWidth(int width) and resizeHeight(int height) that allow an object to be resized. Create a class Rectangle that implements the Resizable interface and implements the resize methods.
+3.A superclass named “Shapes” has a method called “area()”. Subclasses of “Shapes” can be “Triangle”, “circle”, “Rectangle”, etc. Each subclass has its way of calculating area. Using Inheritance and Polymorphism means, the subclasses can use the “area()” method to find the area’s formula for that shape.
+---------------------------------------------------------------------------------------------
+1. 1. Write a Java program to create an interface Shape with the getArea() method. Create three classes Rectangle, Circle, and Triangle that implement the Shape interface. Implement the getArea() method for each of the three classes.
+2. Write a Java programming to create a banking system with three classes - Bank, Account, SavingsAccount, and CurrentAccount. The bank should have a list of accounts and methods for adding them. Accounts should be an interface with methods to deposit, withdraw, calculate interest, and view balances. SavingsAccount and CurrentAccount should implement the Account interface and have their own unique methods.
+3. To write a Java program to EMP salary details using interface.
+1. To write a java program for Arithmetic operations such as Add, Sub, Mul and Div using Hybrid Inheritance.
+2. Write a Java program to create an interface Shape with the getArea() method. Create three classes Rectangle, Circle, and Triangle that implement the Shape interface. Implement the getArea() method for each of the three classes.
+3. Write a Java programming to create a banking system with three classes - Bank, Account, SavingsAccount, and CurrentAccount. The bank should have a list of accounts and methods for adding them. Accounts should be an interface with methods to deposit, withdraw, calculate interest, and view balances. SavingsAccount and CurrentAccount should implement the Account interface and have their own unique methods.
+4. To write a Java program to EMP salary details using the interface.
+1. Write a program for Arithmetic operations using Hierarchical Inheritance.
+2. Write a program for Employee using Multilevel Inheritance.
+3. Create an interface Animal with void sound() and void eat() an implement two classes Dog and Cat using these two abstract methods. 
+---------------------------------------------------------------------------------------------
+1.      Create a package named addition inside this package, create a class Add as well as You create package for subtraction, multiplication, division and do the same.
+2.      Create a Package named person inside this package create class PersonalDetails, Address and Employment.
+3.      Create a Package named student inside this package create class StudentDetails, Marks and Result.
+1. Create a package named addition inside this package, create a class Add as well as You create package for subtraction, multiplication, division and do the same. 
+ 2. Create a Package named person inside this package create class PersonalDetails, Address and Employment. 
+ 3. Create a Package named student inside this package create class StudentDetails, Marks and Result.
+1. Create a package named addition inside this package, create a class Add as well as You create package for subtraction, multiplication, division and do the same. 
+ 2. Create a Package named person inside this package create class PersonalDetails, Address and Employment. 
+ 3. Create a Package named student inside this package create class StudentDetails, Marks and Result.
+---------------------------------------------------------------------------------------------
+Strings
+--------------
+1.Sales Commissions) Use a one-dimensional array to solve the following problem: A company pays its salespeople on a commission basis. 
+The salespeople receive $200 per week plus 9% of their gross sales for that week. 
+For example, a salesperson who grosses $5000 in sales in a week receives $200 plus 9% of $5000, or a total of $650. 
+Write an application (using an array of counters) that determines how many of the salespeople earned salaries in each of the following ranges (assume that each salesperson’s salary is truncated to an integer amount): a) $200–299 b) $300–399 c) $400–499 d) $500–599 e) $600–699 f) $700–799 g) $800–899 h) $900–999 i) $1000 .
+ I want this type of program exercise for java string and loop.
+2.Enter the string using user input and reverse it.
+example: Enter the string "strong" and you will get output "gnorts"
+3.Find second largest maximum number from given array.
+arr1={20,45,67,34,76,54,86}
+4.  Counting Vowel and Consonant Frequency in a String.
+  Str1="anudip"
+vowel=3;COnsonant=3
+---------------------------------------------------------------------------------------------
+Arrays And Collections
+.Write a Java program to get the first and last occurrence of the specified elements in a linked list.
+2.Write a Java program to get print all elements of  2D array using for loop.
+1. write a program for sorting the number in ascending order array without using sort() method
+2. WAP to descending order array using sort() method.
+3. WAP to find the particular element.
+4. WAP to find the biggest number of given array.
+---------------------------------------------------------------------------------------------
+1.Write a Java program to sort an array of given integers[45,35,56,67,78,89,78,12,20]
+2.Write a Java program to search the particular integer in a list(key=67),list[45,35,56,67,78,89,78,12,20]
+1.Write a Java program to sort in ascending order an array of given integers[45,35,56,67,78,89,78,12,20]
+2. Write a Java program to sort in descending order an array of given string[A,X,D,Z,Y,C,W,B]
+3.Write a Java program to search the particular integer in a list(key=67),list[45,35,56,67,78,89,78,12,20]
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+

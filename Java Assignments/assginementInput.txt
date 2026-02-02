@@ -1,0 +1,48 @@
+1.Assignment Question:
+Write a Java program that collects the following information about an employee:
+Employee ID
+Full Name
+Department
+Designation
+Salary
+Is the employee permanent?
+After collecting the input, display the employee profile in a clean and readable format.
+
+2.Assignment Question:
+Create a Java program that takes the following input from the user for a product:
+Product Name
+Product ID
+Price
+Quantity in stock
+Supplier Name
+Supplier Location
+Display all the product details in a well-formatted product report.
+
+3.Assignment Question:
+Write a Java program to collect the following book details from the user:
+Book Title
+Author
+Number of Pages
+Price
+Genre
+Is it available as an eBook?
+Once all inputs are received, print a summary of the book.
+
+4.Assignment Question:
+Create a Java program to take the following information about a patient:
+Patient ID
+Full Name
+Age
+Body Temperature
+Blood Group
+Has allergies?
+After collecting the data, display a structured patient medical report.
+
+5.Assignment Question:
+Design a Java program to accept and display the following details about a car:
+Car Model
+Manufacturing Year
+Color
+Price
+Is it an electric vehicle?
+Vehicle Identification Number (VIN)

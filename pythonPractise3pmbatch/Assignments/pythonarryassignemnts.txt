@@ -1,0 +1,39 @@
+1)Create an array of type 'i' (signed int) and fill it with the squares of all even numbers between 1 and 50.
+
+2)Write a program that accepts a list of floats, stores them in an array of type 'f', and then replaces all negative values with their absolute values.
+
+3)Construct an array of type 'i' with 20 random integers between 100 and 200. Remove all prime numbers from the array in-place.
+
+4)Create an array of type 'd' (double float), and rotate it left by k positions, where k is user input.
+
+5)Write a program to create two arrays of type 'i'. Merge them such that the resulting array is sorted in descending order and has no duplicates.
+
+6)Create an array of type 'i' containing the first 15 Fibonacci numbers. Then reverse the array using slicing.
+
+7)Accept user input to build an array of type 'u' (Unicode characters). Then remove all vowels from it and print the resulting array.
+
+8)Generate an array of type 'i' with 30 integers. Split it into two separate arrays: one for even indices and one for odd indices.
+
+9)Create a floating-point array ('f') representing temperature readings for 7 days. Replace every temperature below 0 with the average of all temperatures.
+
+10)Create an array of type 'i' with elements from 1 to 100. Remove all elements that are divisible by 3 or 5 but not both.
+
+11)Initialize an array of type 'i' with random integers. Implement an in-place bubble sort algorithm using only array operations (no Python list methods).
+
+12)Write a function that accepts a string and returns an array of type 'u' containing only the unique characters in sorted order.
+
+13)Build an array of type 'f' using user input, then normalize the values between 0 and 1 using the formula (x - min) / (max - min).
+
+14)Create an array of type 'i' and implement a binary search algorithm on it without converting it to a list.
+
+15)Design a program that reads an array of type 'i' and compresses consecutive duplicates into one. E.g., [1, 1, 2, 2, 2, 3] becomes [1, 2, 3].
+
+16)Create an array of type 'd' with 20 random float numbers. Round each value to 2 decimal places and store them in a new array.
+
+17)Using an array of type 'i', write a program to calculate the prefix sum (cumulative sum) of the array and store it in a new array.
+
+18)Accept a sentence from the user. Store each word’s length in an array of type 'i', then display the word with the maximum length using only array operations.
+
+19)Write a program that takes a Unicode character array ('u'), and shifts each character forward by 2 in Unicode (like a Caesar cipher).
+
+20)Create an array of type 'i' and implement your own version of the insert(index, value) method (without using the built-in insert() method).

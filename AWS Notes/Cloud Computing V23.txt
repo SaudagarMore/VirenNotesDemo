@@ -1,0 +1,209 @@
+Cloud Computing V23
+
+
+🌐 Introduction to Cloud Computing
+
+Traditional Way (Before Cloud)
+
+* Watch movies using DVDs or store files on USBs.
+* Buy and manage physical servers (costly, complex, time-consuming).
+* Scaling up = more money, time, and headache.
+* If traffic drops, unused servers = waste of money.
+
+Cloud Way
+
+* **Access computing resources (servers, storage, apps)** via the Internet.
+* Hosted in **remote data centers** (aka "the cloud").
+* Pay only for what you use (**pay-as-you-go**).
+
+---
+
+💡 Why Cloud Computing?
+
+1. **Pay-as-you-go** – No upfront investment.
+2. **Scalable & Flexible** – Increase/decrease resources instantly.
+3. **Fast** – Deploy in minutes, not months.
+
+---
+
+🚀 Popular Cloud Providers
+
+* **AWS** (Amazon Web Services)
+* **Azure** (Microsoft)
+* **GCP** (Google Cloud Platform)
+
+---
+
+☁️ Types of Cloud Services
+
+| Type                                   | Description                               |
+| -------------------------------------- | ----------------------------------------- |
+| **IaaS** (Infrastructure as a Service) | Rent virtual servers, storage, networking |
+| **PaaS** (Platform as a Service)       | Full development/deployment environment   |
+| **SaaS** (Software as a Service)       | Ready-to-use apps (e.g., Gmail, Netflix)  |
+
+---
+
+🔸 AWS (Amazon Web Services)
+
+* First launched in **2006**
+* Started with **S3** and **EC2**
+* Now over **200+ services** (AI, ML, security, etc.)
+
+ Who Uses AWS?
+
+Netflix, NASA, eSports, many others.
+
+ Market Share (Q2 2024):
+
+* **AWS**: 32%
+* Microsoft: 23%
+* Google Cloud: 12%
+
+---
+
+🖥️ What is a Server?
+
+* A machine that serves resources to users (like Paytm app backend)
+* Can be **physical** or **cloud-based**
+
+---
+
+🔧 EC2 (Elastic Compute Cloud)
+
+* Virtual server in the cloud
+* Run apps, store data
+* Only pay for what you use
+* Easy to **scale up/down**
+
+Key Features:
+
+* Different instance types (t2.micro, etc.)
+* OS options (Linux, Windows)
+* Secure login (key pair)
+* Supports **auto-scaling** and **load balancing**
+
+---
+
+ 📋 EC2 Instance Lifecycle
+
+* **Pending** → Launching
+* **Running** → Active
+* **Stopping** → Shutting down
+* **Stopped** → Off (not billed)
+* **Terminated** → Deleted
+
+---
+
+ 🧱 Steps to Create an EC2 Instance
+
+1. **Name & Tags** – e.g., `web-server`, `env: production`
+2. **Select AMI** – Choose OS
+3. **Instance Type** – e.g., t2.micro (1 CPU, 1GB RAM)
+4. **Key Pair** – Secure access (public & private key)
+5. **Network & Security** – VPC (Virtual Private Cloud)
+6. **Firewall Rules (Security Group)**
+
+   * SSH: 22
+   * HTTP: 80
+   * HTTPS: 443
+7. **Storage (EBS)** – Default: 8GB, Max: 16TB
+8. **Advanced Settings** – Scripts, behavior, placement, etc.
+
+---
+
+ 🗄️ AWS S3 (Simple Storage Service)
+
+* **Object storage** for files, videos, photos, etc.
+* Infinite scalability
+* Secure, reliable
+* Used by BBS to preserve 100 years of data!
+
+ S3 Concepts:
+
+* **Bucket** – Container for files
+* **Object** – File (data + metadata)
+* **Key** – Unique object name
+* **Region** – Physical storage location
+* **Storage Classes** – Cost vs. Access options
+
+---
+
+🪜 Steps to Create S3 Bucket
+
+1. Login to AWS Console
+2. Open S3
+3. Click **Create Bucket**
+4. Choose **Name**, **Region**
+5. Set options: encryption, versioning
+6. Set permissions
+7. Click **Create**
+
+---
+ 📦 S3 Storage Classes
+
+| Class                | Use Case                 |
+| -------------------- | ------------------------ |
+| Standard             | Frequent access          |
+| Intelligent-Tiering  | Smart switching for cost |
+| Standard-IA          | Infrequent access        |
+| One Zone-IA          | Infrequent, single zone  |
+| Glacier              | Archive                  |
+| Glacier Deep Archive | Long-term archive        |
+
+---
+
+ 🔐 S3 Permissions & Security
+
+* **IAM Policies** – Who can access what
+* **Bucket Policies**
+* **ACLs** – Legacy permissions
+* **Encryption** – SSE or Client-side
+* **Versioning** – Recover deleted or old files
+* **MFA Delete** – Extra protection
+
+---
+
+🧾 Bucket Naming Rules
+
+* 3–63 characters
+* Lowercase letters, numbers, `-` and `.`
+* Must start and end with a letter or number
+* No adjacent dots or IP-like names
+
+---
+ 📤 Uploading Files to S3
+
+* **GUI** – Web console
+* **CLI** – Command line
+* **API**
+* **SDK**
+
+---
+
+💾 Free Usage Limit
+
+* 5TB free for S3 bucket size
+
+---
+
+ 🌀 Versioning
+
+* Maintains **copies** of the same file
+* Helps recover deleted or overwritten files
+* Each file version has a **unique ID**
+* Disabled by default, can be enabled
+
+---
+
+✅ Summary
+
+* Cloud computing saves time, money, and effort
+* AWS is the **leader** in cloud services
+* EC2 → For compute (virtual server)
+* S3 → For storage (infinite capacity)
+* Everything is **scalable**, **secure**, and **pay-as-you-go**
+
+---
+THANK YOU!
+VIRAT....

@@ -1,0 +1,32 @@
+1)List=[10,52,63,48,79]
+Given a list of numbers, use map() to return a list of their squares.
+
+2)create a list add 10 items from user and a list of integers, use filter() to get only the divisible by 3  numbers.
+
+3)String["Python", "is", "Platform", "independent", "proramming", "language"]
+Given a list of lowercase strings, use map()  to convert all to uppercase.
+
+4)create a list as Test[] add 10 string values from user
+and filter only those with more than 5 characters using filter()
+
+5)Ask the user to input an alphanumeric string. Use filter()  to extract all digits from it.
+
+6)Given a list of strings, return a list with all strings reversed using map().
+
+7)Write a generator function that yields numbers from 1 to N (user input).
+
+8)Write a generator to generate the first N Fibonacci numbers.
+
+9)Write a generator that yields even numbers up to a user-specified limit/numers.
+
+10)Write a generator that yields prime numbers up to a user-defined limit/numbers.
+
+11)Use a generator expression to calculate squares of numbers from 1 to 10.
+
+12)Write a generator that yields only numbers divisible by 3 from 1 to N.
+
+13)Write a generator that yields each character of a string (user input) one by one.
+
+14)Convert a predefined list of items into a generator and print all elements one by one.
+
+15)Write a generator that counts down from N to 0 (input from user).

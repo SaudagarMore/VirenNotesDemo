@@ -1,0 +1,56 @@
+🧠What is a Port? 
+In computer networking, a port is like a door or gate through which data enters or leaves a computer.
+
+A computer or server may run many services (like websites, email, file sharing).
+Each service uses a different port to send or receive data.
+
+---
+🧍‍♂️💡 Real-Life Example: A Big Office Building
+
+Imagine a big office building (computer/server):
+
+* Inside the building, there are many departments: HR, Finance, IT, Sales, etc.
+* Each department has its own room number.
+* When a courier comes to deliver something, they need to know:
+
+  * The building address (IP address)
+  * The room number (port number)
+
+📦 Courier = Data
+🏢 Building = Computer or Server
+🚪 Room Number = Port Number
+
+So, if the data is a request to open a website (like google.com), the courier goes to the building (IP address) and delivers it to the Web Department (Port 80).
+
+---
+
+🌐 Technical Side: Common Port Numbers
+
+Here are some common services and their port numbers:
+
+| Service             | Port Number |
+| ------------------- | ----------- |
+| HTTP (Web)          | 80          |
+| HTTPS (Secure Web)  | 443         |
+| FTP (File Transfer) | 21          |
+| SSH (Secure Login)  | 22          |
+| SMTP (Send Email)   | 25          |
+| DNS (Find websites) | 53          |
+
+---
+🛠️ Why Are Ports Useful?
+
+They help the computer know which service to talk to.
+Without ports, all data would get mixed up. Think of trying to deliver a parcel to a building with no room numbers — chaos!
+
+---
+👨‍🏫Simple Summary
+
+* Ports are like doors on your computer.
+* Each service (like websites or email) uses a specific port number.
+* IP address = Computer address
+* Port number = Service door
+
+---
+
+ diagram or animation

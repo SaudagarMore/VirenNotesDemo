@@ -1,0 +1,38 @@
+Java Input && operators
+------------------
+1)Scanner class
+------------------------
+i)it is class which call from java.util package.
+ii)it is used form taking input from user from multiple 
+types of data .in that int,string,boolean,float,char.
+iii)Scanner class is case sesitive .
+iv)Scanner class have some predefined method.
+
+i)next() ->use for taking string input from keyborad input.
+ii)nextLine() ->use for taking string from keyborad input nextLine takes input multiple lines.
+iii)nextShort()->it is used for taking short value form keyborad input.
+iv)nextInt()->it is used for taking int value from keyboard input.
+v)nextDouble->it is take Double input value.
+vi)nextLong()->it is used from taking Long type value from keyboard.
+vi)nextBoolean() ->it is used for taking boolean value from user.
+vii)hasnext()->call collections
+viii)Close()->for cloase the Scanner class.
+
+v)for use this method for input you have to must create object of Sanner class without Scanner object 
+we cant access this method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

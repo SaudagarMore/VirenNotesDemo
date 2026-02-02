@@ -1,0 +1,14 @@
+Compile-Time Polymorphism (Method Overloading)
+
+i)Create a class Calculator with an overloaded method add() that can add two integers, two doubles, and three integers. Write a program to demonstrate all three.
+ii)Write a Java program with a class Printer that has multiple overloaded print() methods to print different data types (int, string, float).
+iii)Implement a class AreaCalculator with overloaded methods area() to calculate area of a square, rectangle, and circle.
+iv)Design a class Multiply with an overloaded method to multiply two, three, and four numbers of type int.
+v)Create a Student class with overloaded constructors to initialize student details with different combinations of name, age, and roll number.
+
+Run-Time Polymorphism (Method Overriding)
+i)Create a base class Animal with a method speak() and override it in derived classes Dog and Cat. Call the method using base class pointer.
+ii)Design a class hierarchy with a base class Shape and derived classes Circle, Rectangle, and Triangle. Override the method draw() in each derived class and demonstrate run-time polymorphism.
+iii)Write a program with a base class Vehicle and derived classes Car and Bike, each overriding the method startEngine(). Call the method using a Vehicle reference.
+iv)Implement a class Employee with a virtual method calculateSalary(), and override it in PermanentEmployee and ContractEmployee classes. Demonstrate runtime polymorphism using base class pointer.
+v)Create a base class Appliance with a method turnOn(), and override it in Fan and Light. Show polymorphic behavior using base class references.

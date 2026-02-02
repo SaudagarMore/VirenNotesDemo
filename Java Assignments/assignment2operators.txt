@@ -1,0 +1,23 @@
+Q1.Take two numbers as input and print their sum, difference, product, and division.
+Q2.Take two numbers from the user and calculate floor division and modulus.
+Q3.Ask the user for base and exponent. Calculate the result using Math.pow().
+Q4.Take two numbers and calculate the average using arithmetic operators.
+Q5.Ask the user to enter the total price and number of items, and calculate the price per item.
+Q6.Take two numbers and print whether the first is greater than, less than, or equal to the second. 
+Q7.Ask the user for their age. Check and print whether they are eligible to vote (age ≥ 18). (Use comparison only; skip logic control.)
+Q8.Take a number from the user and check if it is even using number % 2 == 0.
+Q9.Take two inputs and check if both are equal using == and != operators.
+Q10.Take a number, add 10 to it using +=, and print the new value.
+Q11.Take a number and double it using the *= assignment operator.
+Q12.Ask the user for a value, divide it by 5 using /=, and show the result.
+Q13.Take two boolean values (true or false) as input. Show the result of and, or, and not.
+Q14.Ask the user for age and citizenship status (boolean). Print whether they are eligible for a job (age > 18 and citizen == true). (Skip conditionals — just compute and print result of the logical expression.)
+Q16.Ask the user for a number and print its square and cube using arithmetic operators.
+Q17.Take 3 numbers and calculate their total sum and average.
+Q18.Take the length and width of a rectangle and calculate its area and perimeter.
+Q19.Take a number and increase it by 5%, then print the new number.(Hint: Multiply by 1.05)
+Q20.Input a number and print the remainder when divided by 3 and 5 separately.
+Q21.1)Use a for loop to count how many numbers between 1 to 200 are divisible by both 3 and 7.
+Q22.Accept a number and use a while loop to print its digits in reverse order.
+Q23.Use a for loop to print the squares of numbers from 10 to 1 in descending order.
+Q24.Use a do-while loop to calculate the sum of even numbers until the user enters an odd number.

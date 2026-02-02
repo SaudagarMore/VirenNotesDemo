@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic IndexedDB</title>
+</head>
+<body>
+  <input type="text" id="nameInput" placeholder="Enter name">
+  <button onclick="saveName()">Save</button>
+  <p>Saved Name: <span id="savedName"></span></p>
+  <script>
+    let db;
+    // Open or create the database
+    const request = indexedDB.open("MyDB", 1);
+    request.onupgradeneeded = function (event) {
+      db = event.target.result;
+      db.createObjectStore("names", { keyPath: "id" });
+    };
+   request.onsuccess = function (event) {
+      db = event.target.result;
+      loadName();
+    };
+   function saveName() {
+      const name = document.getElementById("nameInput").value.trim();
+      if (!name) return;
+     const tx = db.transaction("names", "readwrite");
+      const store = tx.objectStore("names");
+      store.put({ id: 1, name });
+
+      tx.oncomplete = loadName;
+    }
+
+    function loadName() {
+      const tx = db.transaction("names", "readonly");
+      const store = tx.objectStore("names");
+      const getRequest = store.get(1);
+
+      getRequest.onsuccess = function () {
+        const result = getRequest.result;
+        document.getElementById("savedName").textContent = result ? result.name : "None";
+      };
+    }
+  </script>
+</body>
+</html>

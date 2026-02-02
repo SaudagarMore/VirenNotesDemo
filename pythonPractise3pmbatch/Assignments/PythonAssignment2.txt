@@ -1,0 +1,17 @@
+Solve This Quesitons Using Python Operators
+Q1.Take two numbers as input and print their sum, difference, product, and division.
+Q2.Take two numbers from the user and calculate floor division and modulus.
+Q3.Ask the user for base and exponent. Calculate the result using **.
+Q4.Take two numbers and calculate the average using arithmetic operators.
+Q5.Ask the user to enter the total price and number of items, and calculate the price per item.
+Q6.Take two numbers and print whether the first is greater than, less than, or equal to the second.
+Q7.Ask the user for their age. Check and print whether they are eligible to vote (age ≥ 18).
+Q8.Take a number from the user and check if it is even by comparing number % 2 == 0.
+Q9.Take two inputs and check if both are equal using == and !=.
+Q10.Take a number, add 10 to it using +=, and print the new value.
+Q11.Take a number and double it using *= assignment operator.
+Q12.Ask the user for a value, divide it by 5 using /=, and show the result.
+Q13.Take two boolean values (True or False) as input. Show the result of and, or, and not.
+Q14.Ask the user for age and citizenship status. Print whether they are eligible to apply for a job:
+(Eligible if age > 18 and citizen == True)
+Q15.Ask the user for a string and a character. Check whether the character is in the string using the in operator.

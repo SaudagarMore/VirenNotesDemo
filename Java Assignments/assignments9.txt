@@ -1,0 +1,66 @@
+Q1. [Hierarchical Inheritance – ArtEvent Management, Revised]
+Create a base class EventDetails with attributes: eventTitle, venue.
+Create two derived classes:
+ArtExhibition with artistName, entryFee.
+DanceShow with performer, showType.
+
+Tasks:
+Create one object of ArtExhibition and one of DanceShow.
+Display both event details.
+Check if the ArtExhibition entry fee is above ₹700 and print a message accordingly.
+Check if the DanceShow is a "Solo" performance and print "Solo Performance" or "Group Performance".
+
+Q2. [Multilevel Inheritance – TechProduct Filtering, Revised]
+Base class: ProductInfo with productName, category.
+Derived class: Gadget with brand.
+Further derived: Smartwatch with batteryLife (in hours) and price.
+
+Tasks:
+Create two Smartwatch objects.
+Display details of both smartwatches.
+Compare both smartwatches: which one has better battery life?
+Print which smartwatch is cheaper.
+
+Q3. [Hierarchical Inheritance – Fitness Centre, Revised]
+Base class: PersonProfile with fullName, age.
+Derived class: YogaMember with level, monthlyFee.
+Derived class: ZumbaMember with sessionDays, trainerName.
+
+Tasks:
+Create one YogaMember and one ZumbaMember.
+Display their details.
+Check if the YogaMember is "Advanced" level; if so, apply a 10% discount to their fee and print the new fee.
+Check if the ZumbaMember attends more than 3 sessions per week and print a message like "Regular Attendee".
+
+Q4. [Multilevel Inheritance – Learning Management, Revised]
+Base class: LearningMaterial with materialTitle, subject.
+Derived: CourseMaterial with level.
+Derived: VideoCourse with durationHours, instructorName.
+
+Tasks:
+Create two VideoCourse objects.
+Display both course details.
+Compare which course is longer in duration.
+Check if any course is taught by "Prof. Mehra", and print a custom message if yes.
+
+Q5. [Hierarchical Inheritance – Transport Booking, Revised]
+Base class: TransportService with serviceName, city.
+Derived class BusService with busType, fare.
+Derived class TaxiService with carType, isAvailable.
+
+Tasks:
+Create one BusService and one TaxiService.
+Display both services.
+If the Taxi is available, print “Taxi is available for booking”.
+If Bus fare is above ₹500, print "Premium Bus Service".
+
+Q6. [Multilevel Inheritance – Research Publication System, Revised]
+Base class: Publication with title, publicationYear.
+Derived: Journal with journalName.
+Derived: ResearchArticle with author, impactFactor.
+
+Tasks:
+Create two ResearchArticle objects.
+Display details of both.
+Compare which article has a higher impact factor.
+Check which article was published more recently.

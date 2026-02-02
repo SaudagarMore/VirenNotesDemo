@@ -1,0 +1,43 @@
+Q1.Design a program with a base class Shape having a method area().
+Create a derived class Rectangle that accepts length and width, and overrides the area() method to return area of rectangle.
+
+Q2.Employee — with attributes name and salary, and a method display() to show details.
+Manager — inherits from Employee and adds an attribute department.
+Write a program to create a Manager object and display all details.
+
+Q3.University — stores university_name.
+College — inherits from University and stores college_name.
+Student — inherits from College and stores student_name.
+Write a method to display all names in proper hierarchy.
+
+Q4.Create three classes:
+Grandparent — with a method show_grandparent().
+Parent — inherits from Grandparent and adds show_parent().
+Child — inherits from Parent and adds show_child().
+Write a program to create an object of Child and call all three methods.
+
+Q5.Create a parent class Vehicle with method info() that prints “This is a vehicle.”
+Derive a class Car that adds an attribute brand and overrides info() to include brand details.
+Write code to demonstrate the overriding concept.
+
+Q6.Class Account — stores account_no and balance.
+Class SavingsAccount — inherits from Account and adds interest_rate.
+Class Customer — inherits from SavingsAccount and stores customer_name.
+Add methods to calculate interest and display all details.
+
+Q7.Class Book stores title and author.
+Class EBook inherits from Book and adds file_size and a method showDetails() to print all information.
+
+Q8.Device class defines a method device_info().
+Computer class inherits from Device and adds processor_info().
+Laptop class inherits from Computer and adds battery_info().
+Use one object to access all methods.
+
+Q9.Person class has attributes name and age.
+Student class inherits from Person and adds roll_no and marks.
+Add a method to display student information.
+
+Q10.LivingBeing → base class with method breathe().
+Animal → derived from LivingBeing, adds method eat().
+Dog → derived from Animal, adds method bark().
+Demonstrate calling all three methods using one Dog object.

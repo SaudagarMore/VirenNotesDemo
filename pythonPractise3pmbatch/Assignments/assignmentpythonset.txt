@@ -1,0 +1,37 @@
+1. Q: Create a set of numbers {1, 2, 3}. Ask the user to enter a number and add it to the set. Display the updated set.
+
+2.Q: Create a set of vowels {‘a’, ‘e’}. Ask the user to input multiple vowels (comma-separated), convert them into a list, and update the set. Display the result.
+
+3. Q: Create a set {10, 20, 30, 40}. Try to remove the element 30 using remove(). then print the set
+
+4.Q: Create a set {5, 10, 15, 20}. Ask the user to enter a number and discard it from the set. Print the set before and after.
+
+5. Q: Create a set {1, 2, 3, 4, 5} and use pop() to remove an element. Show which element was removed and the final set.
+
+6. Q: Create a set with any 5 integers. add values from user into the set and then Show the set before and after using clear().
+
+7. Q: Create a set {100, 200, 300} and copy it into another variable. Modify the original set by adding an element and show that the copy remains unchanged.
+
+8. Q: Ask the user to enter two sets of numbers (comma-separated). Convert them into sets and find the union.
+
+9. Q: Ask the user to enter two sets (comma-separated). Find and print their intersection.
+
+10. Q: Given A = {1, 2, 3, 4} and B = {3, 4, 5, 6}, find elements that are in A but not in B.(find Difference between two sets)
+
+11. Q: Use the sets A = {7, 8, 9} and B = {9, 10, 11} to find the symmetric difference.
+
+12. Q: Ask the user to enter two sets. Check if the first is a subset of the second using issubset().
+
+13. Q: Check if {1, 2, 3, 4} is a superset of {2, 3} using issuperset().
+
+14. Q: Are the sets {1, 2} and {3, 4} disjoint? Use isdisjoint() to verify.
+
+15. (Combination of Methods)
+
+Q: You have two sets:
+registered = {'Rohit', 'Rahul', 'Pravin'}
+attended = {'Pravin', 'Kumar', 'Rohit'}
+Add 'David' to registered
+Find attendees who were not registered
+Find common members (intersection)
+Check if all attendees are part of registered

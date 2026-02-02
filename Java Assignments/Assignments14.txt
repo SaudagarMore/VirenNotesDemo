@@ -1,0 +1,74 @@
+1. Add User-Input Numbers to LinkedList
+ Method(s): add()
+Prompt the user to enter 5 integers and add them to a linked list. Display the full list.
+
+2. Insert Elements at First, Last, and Specific Position
+ Method(s): addFirst(), addLast(), add(index, e)
+Using default data:
+Add "Start" at the beginning
+Add "Middle" at index 2
+Add "End" at the end
+Print the final list.
+
+3. Search Name in List (User Input)
+ Method(s): contains()
+Add 5 default names to a list. Ask user to enter a name. Check if it exists using contains() and print “Found” or “Not Found”.
+
+4. Remove Element by Index (User Input)
+ Method(s): remove(int index)
+ Add 6 city names. Ask user for an index and remove the element at that index. Show updated list.
+
+5. Remove First and Last Elements
+ Method(s): removeFirst(), removeLast()
+Add 5 fruit names to a list. Remove the first and last element. Print the updated list.
+
+6. Get and Display Elements from Positions
+Method(s): getFirst(), getLast(), get(index)
+Create a list with 5 default elements.
+Show the first, last, and middle (index 2) elements using get methods.
+
+7. Count Elements and Clear the List
+Method(s): size(), clear(), isEmpty()
+Add 4 default colors to a list.
+Print the size
+Clear the list
+Check and display if the list is now empty
+
+8. Count Even Numbers (User Input)
+ Method(s): add(), get(index), size()
+Take 5 integers from user, add to LinkedList. Count how many are even numbers and print the count.
+
+9. Compare First and Last Element
+ Method(s): getFirst(), getLast()
+Add 5 elements. Check if first and last elements are the same. Print "Same" or "Different".
+
+10. Display List in Reverse (Without Using Built-in Reverse)
+Method(s): get(index), size()
+Add 5 default items to the list. Print them in reverse order using a loop (without reversing the list itself).
+
+Practical-Based Stack Questions
+ Covers methods like:
+push(), pop(), peek(), search(), isEmpty()
+
+1. Push and Pop User Integers
+ Method(s): push(), pop()
+Ask user to enter 5 numbers and push them to stack. Then pop all and print one by one (LIFO order).
+
+2. Peek at Top Element
+ Method(s): push(), peek()
+Push 3 strings into a stack. Use peek() to show the current top element without removing it.
+
+3. Search Element in Stack
+ Method(s): push(), search()
+Push 4 default items (e.g., [10, 20, 30, 40]). Ask user to input a number. Use search() to find and print its position from top. If not found, print -1.
+
+4. Pop Until Stack is Empty (Default Data)
+ Method(s): isEmpty(), pop()
+Push 5 default items to a stack. Keep popping and printing until isEmpty() returns true. If empty, print “Stack is empty.”
+
+5. Simulate Undo Feature
+ Method(s): push(), pop(), peek()
+Simulate typing:
+Push “Type A”, “Type B”, “Type C”
+On "Undo", pop the last command
+Show the current top using peek()

@@ -1,0 +1,9 @@
+1)Write a program to input n elements into a 1D array. Input a number x and search whether x is present in the array or not using linear search.
+2)Find the index of first occurrence Modify the above program to print the index of the first occurrence of the number if found, else print "Not Found".
+3)Input an array of n integers. Input a number x. Count how many times x appears in the array.
+4)Input a 2D array (matrix) of size m x n. Input an element x. Use linear search to find if x is present in the matrix.
+5)Write a program to input n numbers into an array and find the largest element using linear search.
+6)Input a 2D array and use linear search logic to find the smallest element in the matrix.
+7)Write a program to check if there are any duplicate elements in a 1D array.
+8)Write a program to display all even numbers from a given 1D array using linear search-style iteration.
+9)What is JAva

@@ -1,0 +1,11 @@
+1)creat a method with two parameters and caluclate the area of the cirecle and pass values from user..
+2)take  a number from user and count the how many digits in the number use while loop...
+3)create a methd name as power with two parameters anc calcualte the power of first parameters
+4)take a method as MyDetails and print your registerid,name,fees,course,location
+using parameters and arguments..
+5)create static method with two parameters and swap the values of two variables and pass values as 12 and 65.
+6)take three numbers from user and check which number is max than 3 numbers. pass values from user.
+7)create a method a one parameter and print the factorial of that number pass value as 7.
+8)create static method name as with a parameter and print the cube of that number.
+9)create a method with one parameters and print the table of the number only the number is max than 20 and divisible by 5 and less than50...
+10)take a number from user and calculate the sum of first 15 number using do-while loop.

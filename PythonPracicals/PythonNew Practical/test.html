@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LocalStorage Example</title>
+</head>
+<body>
+  <h2>Save Name to LocalStorage</h2>
+
+  <!-- Input and Button -->
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button onclick="saveName()">Save</button>
+
+  <h3>Saved Name:</h3>
+  <p id="output"></p>
+
+  <script>
+// Function to save name to localStorage
+function saveName() {
+  const name = document.getElementById("nameInput").value;
+  if (name) {
+    localStorage.setItem("savedName", name);
+    showName();
+  } else {
+    alert("Please enter a name.");
+  }
+}
+
+// Function to display saved name from localStorage
+function showName() {
+  const savedName = localStorage.getItem("savedName");
+  if (savedName) {
+    document.getElementById("output").textContent = savedName;
+  } else {
+    document.getElementById("output").textContent = "No name saved.";
+  }
+}
+
+// Call showName() on page load
+window.onload = showName;
+
+  </script>
+</body>
+</html>
+
+

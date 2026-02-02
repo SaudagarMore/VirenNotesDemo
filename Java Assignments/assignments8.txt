@@ -1,0 +1,47 @@
+1) Concert Class - Inheritance + Filtering + this Keyword
+Create a base class Event with the attributes eventName and location.
+Create a derived class Concert that adds artistName and ticketRate.
+Use constructors and the this keyword.
+Display all concert details.
+Display concerts with ticket rates above ₹1000.
+Count how many concerts are in "Delhi".
+
+2)Car Class - Inheritance + Conditional Filtering
+Create a base class Vehicle with brand and fuelType.
+Create a derived class Car with model and price.
+Use constructors and getters.
+Display all car details.
+Display electric cars.
+Count how many cars are priced above ₹10,00,000.
+
+3)Doctor Class - Constructor Overloading + Inheritance
+Create a base class Person with name and age.
+Create a derived class Doctor with specialization and consultationFee.
+Use constructor overloading: one with all fields, another with default fee ₹500 and age 30.
+Display all doctor details using toString().
+Display doctors older than 40.
+Count how many are specialized in "Cardiology".
+
+4). LaptopProduct Class - Inheritance + Filtering
+Create a base class Product with productId and category.
+Create a derived class LaptopProduct with brand and price.
+Use the this keyword in constructors.
+Display all product details.
+Display only those in the "Electronics" category.
+Count how many laptops cost more than ₹50,000.
+
+5)LibraryBook Class - Inheritance + Boolean Filtering
+Create a base class Book with title and author.
+Create a derived class LibraryBook with genre and a boolean isAvailable.
+Use getter methods.
+Display all books.
+Display only available books.
+Count how many books are of genre "Science Fiction".
+
+6)GymMember Class - Constructor Overloading + toString + Inheritance
+Create a base class Member with name and membershipType.
+Create a derived class GymMember with durationMonths and fee.
+Use constructor overloading: one accepts all values, one sets duration to 6 and fee to ₹2000.
+Use toString() to display member details.
+Display members with durations over 6 months.
+Count how many have "Premium" memberships.

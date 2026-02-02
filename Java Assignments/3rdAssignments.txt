@@ -1,0 +1,40 @@
+🔹 Q1: Create a method named CheckArmstrong that takes one integer parameter.
+Logic:
+Check if the number is greater than 0.
+An Armstrong number is a number that is equal to the sum of cubes of its digits.
+If it is, print ✅ "Number is an Armstrong number".
+Else, print "Number is not an Armstrong number".
+Example:
+Input: 153 → Output: 1³ + 5³ + 3³ = 153 → ✅ Armstrong number
+
+🔹 Q2: Create a method named CheckPrime that takes one integer parameter.
+Logic:
+Check if the number is greater than 1.
+Check if the number is divisible only by 1 and itself.
+Print "✅ Number is Prime" or "Number is not Prime".
+Example:
+Input: 17 → Output: ✅ Prime
+
+🔹 Q3: Create a method named CheckEvenOddSum that takes one integer parameter.
+Logic:
+Calculate the sum of even digits and odd digits in the number separately.
+Print both sums and whether the number has more even or odd contribution.
+Example:
+Input: 2461 → Even sum = 2+4+6 = 12, Odd sum = 1 → More even contribution.
+
+🔹 Q4: Create a method named CheckHarshad that takes one integer parameter.
+Logic:
+A Harshad number is divisible by the sum of its digits.
+If number % sumOfDigits == 0, print ✅ Harshad number.
+Example:
+Input: 18 → 1+8=9 → 18 % 9 == 0 → ✅ Harshad number
+
+🔹 Q5: Create a method named CheckStrongNumber that takes one integer parameter.
+Logic:
+A Strong number is a number whose sum of the factorials of digits equals the number itself.
+If it satisfies, print ✅ Strong number.
+Example:
+Input: 145 → 1! + 4! + 5! = 145 → ✅ Strong number
+
+
+

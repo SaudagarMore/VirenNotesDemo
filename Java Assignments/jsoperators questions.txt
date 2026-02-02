@@ -1,0 +1,35 @@
+Solve This Assignments Using JS Operators Using Js
+---------------------------------------------------
+i)Take two numbers as input and print their sum, difference, product, and division.
+2)Input two numbers and calculate floor division using Math.floor(a / b) and find the modulus using %.
+3)Ask the user for a base and an exponent, then calculate the result using Math.pow().
+4)Take two numbers and calculate their average using arithmetic operators.
+5)Ask the user to enter the total price and number of items, and calculate the price per item.
+6)Take two numbers and print whether the first is greater than, less than, or equal to the second.
+7)Ask the user for their age and check whether they are eligible to vote (age ≥ 18).
+8)Take a number from the user and check if it is even using the % operator.
+9)Take two inputs and check if both are equal using == and not equal using !=.
+10)Take a number, add 10 to it using the += operator, and print the new value.
+11)Take a number and double it using the *= assignment operator.
+12)Ask the user for a value, divide it by 5 using /=, and print the result.
+13)Take two boolean values (true or false) as input and show the result of &&, ||, and ! operators.
+14)Ask the user for their age and citizenship status (boolean). Print whether they are eligible for a job using age > 18 && isCitizen.
+15)Input a number and increase it by 5% using multiplication.
+------------------------------------------------------------------------------
+Solve this Questions on If ,if-else ,nesting if-else ,ladder if-else Using JS
+--------------------------------------------------------------------
+1)Take a number from the user and check if it is positive.
+2)Input a number and check whether it is even or odd.
+3)Ask for the user’s age and check if they are eligible to vote (age ≥ 18).
+4)Take two numbers and print which one is greater.
+5)Check whether a number is positive, negative, or zero.
+6)Take a number and check if it is divisible by both 5 and 11.
+7)Ask the user to enter a year and check whether it is a leap year.
+8)Take three numbers and find the largest using conditional statements.
+9)Take marks and print the grade (A, B, C, D, F) based on score ranges.
+10)Ask the user to enter a character and check if it is uppercase or lowercase.
+11)Input a number and check if it is divisible by 3, 7, both, or neither.
+12)Enter a character and check whether it is a letter, digit, or special symbol.
+13)Take 3 angles and check if they can form a valid triangle (sum should be 180).
+14)Enter a number from 1–7 and print the corresponding day of the week.
+15)Ask for age and citizenship status (boolean). Check if the person is eligible to vote using nested if.

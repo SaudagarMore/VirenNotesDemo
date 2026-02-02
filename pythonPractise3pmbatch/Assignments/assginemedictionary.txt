@@ -1,0 +1,55 @@
+1. Reset Monthly Data Using .clear() (Predefined)
+analytics = {'visits': 1500, 'clicks': 230, 'signups': 35}
+Q)-Reset the data at the end of the month using .clear() and verify the dictionary is empty.
+
+2. Merge Two Student Mark Sheets (Predefined)
+section_A = {'John': 80, 'Ravi': 72}
+section_B = {'Anita': 90, 'Ravi': 75}
+Q)-Merge the dictionaries so that section_B overwrites any common keys.
+
+3. Remove Last Item Using .popitem() (Predefined)
+Given:
+sales_log = {'item1': 'mouse', 'item2': 'keyboard', 'item3': 'laptop'}
+Use .popitem() 
+Q)-to remove the last item, and print the removed item and the updated dictionary.
+
+4. Update Inventory with New Shipment (Predefined)
+Inventory:inventory = {'apple': 10, 'banana': 5}
+New shipment:shipment = {'banana': 7, 'orange': 8}
+Use .update() 
+Q)-to merge shipment data into inventory and print the updated dictionary.
+
+5. Invert Dictionary (Swap Keys and Values) 
+(User Input) Ask the user to enter 3 country-capital pairs 
+(e.g., "India":"Delhi") into a dictionary.
+Q)Create a new dictionary where the   capitals are keys and countries are values.
+
+6. Find the Top Scorer (Predefined) 
+From the given marks: marks = {'Neha': 91, 'Rohit': 86, 'Simran': 94, 'Amit': 88} 
+Q)-Write a program to find and print the student with the highest score.
+
+7. Clear Unused Data (Predefined)
+You are given a dictionary storing temporary sensor data:
+temp_readings = {'sensor1': 30, 'sensor2': 32, 'sensor3': 29}
+Q-)Clear the dictionary after processing and verify that it is empty.
+
+8. Copy Before Modification (Predefined)
+Given:students = {'Amit': 78, 'Sara': 89}
+Q-)Create a copy of the dictionary, update 'Amit'’s marks in the copy, and show that the original remains unchanged.
+
+9. Handle Missing Keys Using .get() 
+(User Input) Ask the user to enter a product
+Q-) name to search in this dictionary: inventory = {'pen': 20, 'notebook': 5} Use .get() 
+to print the quantity or a default message if the item does not exist.
+
+10. Print Report Using .items() (Predefined)
+Given:sales = {'E1': 5000, 'E2': 7000, 'E3': 6000}
+Q-)Print a report using .items() in the format: Employee E1 made sales worth 5000
+
+11. List All Product Names (Predefined)
+Given:store = {'shoes': 40, 'hats': 25, 'jackets': 10}
+Q-)Use .keys() to print all available product names.
+
+12. Total Stock Using .values() (Predefined)
+stacks={1:2000,2:2400,3:3500,4:1500}
+Q-)Using the same store dictionary, calculate and print the total stock (sum of all values).

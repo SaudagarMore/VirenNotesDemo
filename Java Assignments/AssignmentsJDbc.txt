@@ -1,0 +1,156 @@
+-------------------------------------------------------------------------------- --------------------------------------------------------------------------------
+Java Assignment:1). JDBC CRUD Application on Person Table
+Assignment Title:Person Management
+
+To develop a Java console-based application that performs CRUD (Create, Read, Update, Delete) operations using JDBC 
+on a Person table. The application ensures email uniqueness during the creation of a new person record.
+
+Entity: Person
+Field	
+id	int	Auto-incremented primary key
+name	
+email	
+age	
+city	
+phoneNumber	
+
+Functional Requirements:(problems)
+i)Create a new person
+Validate if the email already exists
+If it exists, display: Error: Email already registered.
+Otherwise, insert the new record
+ii)Read person(s)
+iii)View all persons
+iv)View person by ID
+vi)Update a person
+Update any field (name, email, age, city, phone) by ID
+vii)Delete a person
+Delete person by ID
+
+Requirements:
+Use Java JDBC to connect to a MySQL
+Use PreparedStatement to prevent SQL injection.
+Use Database connection pooling (optional for extra credit).
+Use console-based menu to interact with the user.
+Handle SQL exceptions gracefully.
+-------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------
+Java Assignment:2) JDBC CRUD Application with Aggregate Functions & Stored Procedures
+Assignment Title:Product Inventory Management  
+
+Develop a Java JDBC console application to manage products in an inventory system. 
+The application must support standard CRUD operations, utilize aggregate SQL functions, 
+and interact with stored procedures defined in the database.
+
+Entity: Product
+Field	
+product_id	INT	Auto-incremented primary key
+name	
+category
+price	 
+quantity
+The combination of name and category must be unique (to avoid duplicates).
+
+Requirements:
+CRUD Operations:
+i)Create a new product
+Check if a product with the same name and category already exists
+If yes, show: Error: Product already exists in this category.
+ii)Read product(s)
+iii)View all products
+iv)View product by ID
+v)Update product details (name, category, price, quantity)
+vi)Delete a product by ID
+
+Aggregate SQL Operations:
+vii)Calculate total inventory value
+Use: SUM(price * quantity)
+viii)Show highest priced product
+Use: MAX(price)
+ix)Show average price by category
+Use: AVG(price) GROUP BY category
+x)List products with stock below a threshold
+
+Stored Procedure Usage:
+Stored Procedure to Increase Stock Quantity
+xi)Create a stored procedure to increase the stock of a product by product ID:
+-------------------------------------------------------------------------------- --------------------------------------------------------------------------------
+Java Assignment 3: JDBC CRUD Application with Aggregate Functions & Stored Procedures
+Assignment Title: Student Course Management
+
+Build a Java JDBC console application to manage student records and their enrolled courses. 
+This system must support CRUD operations, use aggregate SQL functions, and execute stored procedures.
+
+Entity: Student
+Field	
+student_id	INT	Auto-incremented primary key
+name	
+email	
+department	
+semester
+gpa	
+
+Email must be unique (prevent duplicates)
+
+Functional Requirements:
+CRUD Operations:
+i)Create a new student
+Validate email uniqueness
+ii)Read: All students
+iii)Student by ID
+iv)Update: Any student field by ID
+v)Delete:Student by ID
+
+Aggregate SQL Operations:
+vi)Show average GPA by department
+Find student(s) with highest GPA
+
+Count total students in each semester
+vii)Stored Procedure:
+Create a stored procedure to promote a student to the next semester:
+
+Requirements:
+Use Java JDBC with MySQL
+Use PreparedStatement
+Menu-driven console app
+Handle SQL exceptions gracefully
+-------------------------------------------------------------------------------- --------------------------------------------------------------------------------
+Java Assignment 4: JDBC CRUD Application with Aggregate Functions & Stored Procedures
+Assignment Title:Employee Payroll Management 
+
+Objective:
+Create a Java console application that manages employees and their salaries. 
+Use JDBC, support full CRUD, implement aggregate salary reports, and call stored procedures for bonus distribution.
+
+Entity: Employee
+Field
+emp_id	INT	Auto-incremented primary key
+name	
+email	
+department
+salary	
+joining_date	DATE	Date of joining
+
+Email must be unique
+
+Functional Requirements:
+CRUD Operations:
+i)Create a new employee Prevent duplicate emails
+ii)View all employees or by ID
+iii) Update employee details using id
+iv)Delete employee by ID
+
+Aggregate SQL Operations:
+v)Calculate total payroll cost
+vi)Find highest-paid employee
+vii)Show average salary by department
+viii)List employees joined after a specific date
+
+Stored Procedure:
+ix)Create a stored procedure to add a fixed bonus to all employees in a specific department:
+
+Requirements:
+Java JDBC with MySQL
+Use PreparedStatement
+SQL exception handling
+Menu-driven console interface
+-------------------------------------------------------------------------------- --------------------------------------------------------------------------------

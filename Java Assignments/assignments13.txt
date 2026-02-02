@@ -1,0 +1,76 @@
+1)Add 5 default names to an ArrayList<String>.
+Print all names using forEach().
+
+Insert at Specific Index (User Input)
+2)Ask the user to enter 3 numbers.
+Insert a number at a specific index using add(index, element).
+Display the final list.
+
+Check If Element Exists (User Input)
+3)Create a list of colors: ["Red", "Blue", "Green", "Yellow"].
+Ask user to enter a color name.
+Check with contains() and print whether it exists.
+
+Is the List Empty? (Default + Condition)
+4)Create an empty list.
+If list is empty, add 3 values.
+Print the list size.
+
+Remove by Value and Index (User Input)
+5)Ask the user to enter 5 integers.
+Remove an element by index, and another by value.
+
+Copy One List to Another (Default Values)
+6)Create List A with [1, 2, 3], copy it to List B using addAll().
+Display both.
+
+Compare Lists using containsAll() (User Input)
+7)User enters items for List A and B.
+Check if List A contains all elements of B.
+
+Find Indexes of Duplicates (Default Values)
+8)Add values: [10, 20, 30, 10, 40, 10].
+Use indexOf() and lastIndexOf() for value 10.
+
+Replace an Element (User Input)
+9)User enters 5 names.
+Ask for an index and a new name.
+Replace using set(index, value).
+
+Clear List & Validate (Default + Operation)
+10)Populate a list with 5 items.
+Use clear() and then confirm using isEmpty() and size().
+
+Common Elements using retainAll() (User Input)
+11)User enters values for two lists.
+Retain only common values in the first list.
+
+Remove All Common Elements using removeAll() (Default + Logic)
+12)Use two lists:
+List1 = [1,2,3,4,5]
+List2 = [3,4,6]
+Remove all elements in List2 from List1.
+
+Custom Objects by Attribute (Default Object Values)
+13)Create Student class with name, marks.
+add five records in student collections(use getter ,setter methods)
+Convert List to Array (Default Values)
+14)Convert a list of fruit names to an array using toArray() and print each.
+
+Find Frequency of a Value (User Input)
+16)User enters 10 integers (with duplicates).
+Find how many times a specific number appears.
+
+Dynamic Menu with List Operations (User Input)
+17)Create a console menu:
+Add item
+Remove item
+Display items
+Exit
+Keep asking until user exits.
+
+Reverse a List Without Collections.reverse() (Default Values)
+18)Add 5 integers and print the reversed list manually using a loop.
+
+Use forEach() with Lambda (Default Values)
+19)Create list [2,4,6,8], double each number and print using forEach() and lambda.

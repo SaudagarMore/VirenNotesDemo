@@ -1,0 +1,10 @@
+1)Create a tuple with 5 numbers and find its length using len().
+2)Create a tuple of numbers and find the maximum value using max().
+3)Take 4 numbers as input from the user, store them in a tuple, and find the minimum value using min().
+4)Take a set of numeric inputs from the user, store them in a tuple, and calculate the sum using sum().
+5)Create an unsorted tuple and sort its elements using sorted().
+6)Create a tuple and reverse its order using reversed() and tuple().
+7)Check if a specific value exists in a tuple using the in operator.
+8)Create a list and convert it into a tuple using the tuple() function.
+9)Create a tuple with repeated elements and count how many times a value appears using .count().
+10)Create a tuple and find the index of a specific value using the .index() method.

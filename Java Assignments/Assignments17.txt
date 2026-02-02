@@ -1,0 +1,10 @@
+1)Remove all students with marks less than 50 from a Hashtable.
+2)Find the item with the highest price from a Hashtable<String, Integer>.
+3)Check if any two employees have the same salary in a Hashtable.
+4)Count the total number of keys in a Hashtable<String, Integer>.
+5)Merge two Hashtables<String, String> using putAll().
+6)Store 5 characters and their frequencies in a Hashtable<Character, Integer> and print them.
+7)Print the code of "India" from a Hashtable<String, String> of countries and codes.
+8)Store and print 3 student names with marks using Hashtable<String, Integer>.
+9)Update the balance of an account using replace() in a Hashtable<String, Integer>.
+10)Create a Hashtable to store names of 3 fruits as keys and their prices as values. Print the price of one fruit.

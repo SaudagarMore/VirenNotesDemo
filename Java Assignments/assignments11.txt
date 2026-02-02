@@ -1,0 +1,154 @@
+Q1. Abstract Class + Interface + Method Overriding 
+Create an abstract class Course with attributes courseName, duration, and an abstract method calculateFee().
+Create an interface Certifiable with a method issueCertificate().
+Create a derived class OnlineCourse that includes platform and baseFee, overrides calculateFee() to add a 10% online platform surcharge.
+Implements Certifiable.
+Tasks:
+
+Create one object of OnlineCourse.
+Display all course details.
+Calculate and display the final fee.
+Issue a certificate if the course duration is over 4 weeks.
+
+Q2. Interface + Multiple Inheritance 
+Create an interface Trackable with a method getLocation().
+Create an interface Photographable with a method capturePhoto().
+Create a class WildAnimal with attributes species, age, and implement both interfaces.
+
+Tasks:
+Create two WildAnimal objects.
+Display species and location using getLocation().
+Simulate photo capturing.
+Count animals above the age of 5.
+
+Q3. Abstract Class + Constructor Overloading 
+Create an abstract class ProductReview with attributes productId, userRating, and an abstract method isHighlyRated().
+Create a class ElectronicsReview that extends ProductReview and adds warrantyYears.
+Overload constructors for default and custom rating inputs.
+Tasks:
+
+Create one default and one parameterized object.
+Display their details.
+Determine and print if they are highly rated (above 4.0).
+
+Q4. Abstract Class + Multilevel Inheritance 
+Create an abstract class Scheme with schemeName, launchYear and an abstract method getEligibility().
+Derived: WelfareScheme with targetGroup.
+Further derived: EducationScheme with minAgeRequirement.
+
+Tasks:
+Create two EducationScheme objects.
+Display all scheme details.
+Check if a 16-year-old is eligible.
+Print which scheme is older.
+
+Q5. Interface + Inheritance 
+Create an interface TrackProgress with method updateProgress(int newSteps).
+Base class: AppUser with userName, totalSteps.
+Derived: FitnessUser implements the interface and tracks daily progress.
+
+Tasks:
+Create two FitnessUser objects.
+Update and display step progress.
+Check if a user exceeds 10,000 steps and print "Fitness Goal Achieved".
+
+Q6. Abstract Class + Interface
+Abstract class: WeatherData with location, temperature, abstract method forecast().
+Interface: AlertSystem with method sendAlert().
+Derived class: CityForecast adds humidity, implements the interface.
+
+Tasks:
+Create one CityForecast object.
+Display weather info.
+Forecast based on humidity (e.g., >70% means rain).
+Send alert if temperature > 40°C.
+
+Q7. Abstract Class + Interface + Filtering
+Abstract class: Track with attributes title, lengthInMinutes, and an abstract method getGenre().
+Interface: Downloadable with method download().
+Derived class: AudioTrack with artist, genre, implements interface and abstract method.
+
+Tasks:
+Create a list of AudioTrack objects.
+Display details.
+Download only tracks of genre "Jazz".
+Count those longer than 5 minutes.
+
+Q8. Interface + Constructor Overloading 
+Interface: Reportable with method generateReport().
+Base class: Volunteer with name, hoursWorked.
+Derived class: ProjectVolunteer with projectName, implements interface, and uses constructor overloading.
+
+Tasks:
+Create two ProjectVolunteer objects (one default, one custom).
+Generate reports showing total hours worked.
+Highlight volunteers working more than 20 hours.
+
+Q9. Abstract Class + Multilevel Inheritance
+Abstract class: Mission with missionName, launchDate, abstract method getStatus().
+Derived class: Orbiter with orbitType.
+Further derived: MarsOrbiter with daysInOrbit.
+
+Tasks:
+Create two MarsOrbiter objects.
+Display details.
+Get status based on days (>500 means “Long-term Mission”).
+Compare which orbiter has been in space longer.
+
+Q10. Interface + Hierarchical Inheritance 
+Interface: Payable with method makePayment(double amount).
+Base class: UserAccount with userId, balance.
+Derived: CreditCardAccount and WalletAccount, both implement Payable.
+
+Tasks:
+Create one object of each account type.
+Perform payments.
+Display remaining balance.
+Print warning if balance goes below ₹100.
+--------------------------------------------------------------------------------------
+Question no1 (code)
+----------------------
+abstract class Course {
+    String courseName;
+    int duration;
+    Course(String courseName, int duration) {
+        this.courseName = courseName;
+        this.duration = duration;
+    }
+    abstract double calculateFee();
+}
+
+interface Certifiable {
+    void issueCertificate();
+}
+
+class Overloading extends Course implements Certifiable {
+    String platform;
+    double baseFee;
+
+    Overloading(String courseName, int duration, String platform, double baseFee) {
+        super(courseName, duration);
+        this.platform = platform;
+        this.baseFee = baseFee;
+    }
+public static void main(String[] args) {
+        Overloading overloading=new Overloading("Core Java", 3, "online",3000);
+        System.out.println(overloading.calculateFee());
+        overloading.issueCertificate();
+        overloading.display();
+        }
+    double calculateFee() {
+        return baseFee + baseFee * 0.10;
+    }
+    public void issueCertificate() {
+        if (duration > 4) {
+            System.out.println("Certificate Issued for " + courseName);
+        }
+        else{
+            System.out.println("Not Eligible for Course Certificate");
+        }
+    }
+    void display() {
+        System.out.println("Course: " + courseName + ", Duration: " + duration + " weeks, Platform: " + platform + ", Final Fee: " + calculateFee());
+    }
+}

@@ -1,0 +1,60 @@
+Solve This quesitons using Python .
+---------------------------------------------
+1)Write a program to accept two numbers from the user and print the largest number.
+
+2)Write a program that asks the user to enter their age and determines if they are eligible to vote.
+
+3)Write a program that takes marks (0 to 100) as input and prints the grade:
+A: 90–100
+B: 75–89
+C: 60–74
+D: 40–59
+F: below 40
+
+4)Write a program that checks whether a given number is positive, negative, or zero.
+
+5)Write a program to input a character and check whether it is a vowel or a consonant.
+
+6)Write a program that takes three numbers as input and prints the largest number.
+
+7)Write a program that checks whether a number is divisible by both 3 and 5.
+
+8)Write a program that checks if a person is eligible for a job based on the following conditions:
+Age must be above 18 and below or equal to 60.
+If the age condition is satisfied, then check gender:
+If male → eligible
+If female → eligible only if marital status is "unmarried"
+Other genders → not eligible
+
+9)Write a program to input the number of electricity units consumed and calculate the bill using the following rules:
+Up to 100 units: ₹5/unit
+101–200 units: ₹7/unit
+More than 200 units: ₹10/unit
+
+10)Write a program that takes the temperature in Celsius as input and classifies the weather:
+Above 40 → "Very Hot"
+31 to 40 → "Hot"
+21 to 30 → "Warm"
+11 to 20 → "Cool"
+0 to 10 → "Cold"
+Below 0 → "Freezing"
+
+11)Write a program to input a number and check:
+If it's even, check if it is divisible by 4 → print "Even and divisible by 4"
+Else → print "Even but not divisible by 4"
+If it's odd → print "Odd number"
+
+12)Write a program to accept three sides of a triangle and check whether it is:
+Equilateral
+Isosceles
+Scalene
+Also check if the triangle is valid.
+
+13)Write a program to input a character and check:
+If it's an alphabet, check if it's a vowel or consonant
+If not an alphabet, print "Not an alphabet character"
+
+14)Write a program that accepts the day number (1–7) and prints the corresponding day name.
+If the input is not in this range, print "Invalid day number".
+
+15)Write a program that takes a year as input and checks whether it is a leap year or not.

@@ -1,0 +1,49 @@
+1)Create an Employee class with name, id, and salary. Add methods to update salary and display employee info.
+
+2)Write a class Temperature with a class method c_to_f(cls, celsius) that converts Celsius to Fahrenheit.
+
+3)Define a Circle class with an instance variable radius. Add a method area() that returns the area of the circle.
+
+4)Create a class Car with a class variable total_cars to count how many car objects have been created.
+
+5)Create a MathHelper class with a static method is_even(num) that returns True if the number is even.
+
+6)Write a Book class with title, author, and price. Create multiple book objects and display their data using a method.
+
+7)Create a Company class with class variable company_name. Add a class method change_name(cls, new_name) to update it.
+
+8)Build a Bank class with:
+instance variable: balance
+class variable: bank_name
+static method: calculate_interest(amount, rate, time)
+instance method: apply_interest() using the static method’s result
+
+9)Create a Student class with attributes name and age. Write a method display() to print the student's details.
+
+10)Make a Vehicle class with class variable vehicle_count. Use a class method to show how many vehicles are created.
+
+11)Define a School class with a class variable school_name. Create multiple students sharing the same school name.
+
+12). Create a class MovieTicket that includes:
+Instance variables: movie_name, seat_no, price
+Class variable: theatre_name
+Instance method: display_ticket() to show booking details
+Class method: change_theatre_name() to update the theatre name for all tickets
+
+13)Write a class Rectangle with:
+Instance variables: length, breadth
+Instance method: area() to calculate area
+Static method: is_square(length, breadth) that returns True if both sides are equal
+
+14). Design a class Order that:
+Has instance variables: order_id, items, and total_amount
+Keeps a class variable: total_orders to count how many orders have been placed
+Provides:
+Instance method: display_order() to display order details
+Class method: show_order_count() to display total orders placed
+
+15). Student Grade Evaluator
+Create a class Grade that:
+Takes marks as an instance variable
+Has an instance method: get_grade() that returns a letter grade (A/B/C/D/F) based on marks
+Adds a static method: is_valid_marks(marks) that checks if marks are between 0 and 100

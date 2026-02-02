@@ -1,0 +1,49 @@
+----------------------------------------------------------------------------------------------------------------------
+1. Temperature Limit Exception
+Condition: If a temperature value is less than -100 or greater than 150, throw a TemperatureOutOfRangeException.
+
+Question: Write a method setTemperature(int temp) that sets a temperature. 
+If the temperature is less than -100 or greater than 150, 
+throw a custom exception TemperatureOutOfRangeException 
+with the message "Temperature must be between -100 and 150 degrees."
+----------------------------------------------------------------------------------------------------------------------
+2. Invalid Score Exception
+Condition: If the exam score entered is not between 0 and 100 (inclusive), throw an InvalidScoreException.
+
+Question:Create a method setScore(int score) that
+validates an exam score. If the score is below 
+0 or above 100, throw a custom exception 
+InvalidScoreException with a relevant message. 
+If the score is valid, print "Score recorded."
+----------------------------------------------------------------------------------------------------------------------
+3. Even Number Required Exception
+Condition: If the user enters an odd number where an even number is required, throw an OddNumberException.
+
+Question:Write a method acceptEvenNumber(int number) 
+that throws a custom exception OddNumberException 
+if the number is not even. Otherwise, print "Valid even number."
+----------------------------------------------------------------------------------------------------------------------
+4. Empty String Exception
+Condition: If a method receives an empty string ("") as input, throw an EmptyStringException.
+
+Question:Write a method printGreeting(String name)
+that throws an EmptyStringException if the name is
+an empty string. Otherwise, print "Hello, [name]!"
+----------------------------------------------------------------------------------------------------------------------
+5. Array Size Exception
+Condition: If a user tries to create an array with a negative size, throw an InvalidArraySizeException.
+
+Question:Write a method createArray(int size) that
+throws a custom exception InvalidArraySizeException 
+if the size is negative. therwise, create an integer 
+array of the given size and print "Array of size [size] created."
+----------------------------------------------------------------------------------------------------------------------
+6. Bank Withdrawal Exception.
+Condition: If the withdrawal amount is greater than the available balance, throw an InsufficientFundsException.
+
+Question:Create a class BankAccount with a 
+withdraw(double amount) method.If the amount to 
+withdraw exceeds the current balance, throw a custom
+exception InsufficientFundsException with an 
+appropriate message. Demonstrate this with a main method.
+----------------------------------------------------------------------------------------------------------------------

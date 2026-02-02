@@ -1,0 +1,74 @@
+Q1. [Class + Constructor + Getter + Conditional Logic]
+Create a class named MovieTicket with the following attributes:
+movieName
+seatType
+ticketPrice
+
+In the main method:
+i) Create an array of 5 MovieTicket objects with sample data.
+ii) Display all ticket details.
+iii) Display only those tickets where seatType is "VIP".
+iv) Count and display how many tickets cost more than ₹300.
+
+Q2. [Class + Constructor + Getter + Filtering Logic]
+Create a class named MobilePhone with the following attributes:
+brand
+model
+storageGB
+price
+
+In the main method:
+i) Create an array of 5 MobilePhone objects with sample data.
+ii) Display all phones.
+iii) Display phones with storage greater than or equal to 128GB.
+iv) Count and display how many phones are from the brand "Samsung".
+
+Q3. [Class + Constructor + Getter + Filtering + Conditional Logic+ Object Array]]
+Create a class named Course with the following attributes:
+courseName
+instructor
+durationWeeks
+
+In the main method:
+i) Create an array of 5 Course objects with sample data.
+ii) Display all courses.
+iii) Display only those courses taught by "Dr. Sharma".
+iv) Count and display how many courses have a duration of more than 6 weeks.
+
+Q4. [Class + Constructor + Getter + Filtering Logic+ Object Array]]
+Create a class named Laptop with the following attributes:
+brand
+screenSize
+ramGB
+
+In the main method:
+i) Create an array of 5 Laptop objects with sample data.
+ii) Display all laptops.
+iii) Display only those laptops with screen size greater than 15.0 inches.
+iv) Count how many laptops have 16GB RAM or more.
+
+Q5. [Encapsulation + Constructor + Getter/Setter + Conditional Logic + Object Array]]
+Create a class named Patient with the following attributes:
+name
+age
+diagnosis
+
+In the main method:
+i) Create an array of 5 Patient objects with sample data.
+ii) Display all patient details.
+iii) Display only patients aged above 60.
+iv) Count and display how many patients are diagnosed with "Diabetes".
+
+
+Q6. [Constructor Overloading + Getter + toString + Object Array]
+Create a class named Employee with the following attributes:
+name
+designation
+salary
+
+Implement constructor overloading with the following versions:
+A constructor that accepts all three values: name, designation, and salary.
+A constructor that accepts only name and designation, and sets a default salary of ₹25,000.
+In the main method:
+i) Create an array of 5 Employee objects using both constructors.
+ii) Display all employee details using a toString() method.

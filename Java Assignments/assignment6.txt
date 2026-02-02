@@ -1,0 +1,190 @@
+Q1. [Class + Constructor + Getter/Setter + Logic]
+Create a class Student with private attributes name and marks.
+Use a constructor to initialize both.
+Use getters to access them.
+Add a method isPassed() that returns true if marks ≥ 40.
+Create an object and print whether the student passed or failed.
+
+Q2. [Constructor + toString + Getter/Setter]
+Create a class Book with title, author, and price.
+Use constructor to initialize values.
+Use setter to change the price.
+Override toString() to return book details.
+Create an object, update the price, and print the book.
+
+Q3. [Class + Constructor + Getter/Setter + Logic]
+Create a class BankAccount with private balance.
+Initialize balance in constructor.
+Provide methods deposit() and withdraw() with checks (e.g., don't allow negative withdrawal).
+Print final balance using a getter.
+
+Q4. [Constructor Overloading + toString + Object Array]
+Create a class Car with make and year.
+Overload the constructor to allow:
+Passing both make and year.
+Passing only make (default year = 2020).
+Override toString().
+Create an array of 3 Car objects using both constructors and print them.
+
+Q5. [Class + Constructor + Getter + Logic]
+Create a class Product with name, price, and quantity.
+Use constructor to initialize all.
+Use a method getTotalCost() = price × quantity.
+Create an object, call the method, and print output using toString().
+
+Q6. [Encapsulation + Getter/Setter + Basic Logic]
+Create a class Person with private name and age.
+Use setter to prevent setting age below 0.
+Add method isAdult() that returns true if age ≥ 18.
+7Create a person, set details, and print whether the person is an adult.
+
+Q7. [Class + Getter/Setter + Constructor + Conditional Logic]
+Create a class Movie with title and rating (1–5).
+Use constructor and setter (validate rating is within range).
+Add method getCategory() that returns "Excellent" if rating > 4, "Good" if 3–4, else "Average".
+Print movie details using toString().
+
+Q8. [Multiple Objects + Class + Method + Summary]
+Create a class OrderItem with item name, price, and quantity.
+Add method getItemTotal() = price × quantity.
+In main, create 3 items and calculate the grand total of all items.
+Print each item using toString() and show total bill.
+----------------------------------------------------------------------------------------
+
+Q:9. [Create a class named Book with the following attributes:
+String title
+String author
+double price
+In the main method:]
+i)Create an array of 5 Book objects with sample data.
+ii)Display all books.
+iii)Add logic to display only the books that cost more than ₹500.
+Also, count and display the number of books by a particular author (e.g., "R.K. Narayan").
+
+Q:10. [Create a class named Employee with the following attributes:
+int id
+String name
+double salary
+Write a Java program that does the following:]
+
+i)Takes input from the user to create an array of 3 Employee objects.
+ii)Displays the details of all employees.
+iii)Find and display the employee with the highest salary.
+iv)Calculate and display the average salary of all employees.
+v)Display the names of employees whose salary is below the average.
+------------------------------------------------------------------------------------------
+package DemoApp;
+//class created
+import java.util.Scanner;
+class products {
+//class data memers
+    int prid;
+    String prname;
+    float prprice;
+    int prquantity;
+
+    //getters and setter methods created
+    public int getPrid() {
+        return prid;
+    }
+
+    public void setPrid(int prid) {
+        this.prid = prid;
+    }
+
+    public String getPrname() {
+        return prname;
+    }
+
+    public void setPrname(String prname) {
+        this.prname = prname;
+    }
+
+    public float getPrprice() {
+        return prprice;
+    }
+
+    public void setPrprice(float prprice) {
+        this.prprice = prprice;
+    }
+
+    public int getPrquantity() {
+        return prquantity;
+    }
+
+    public void setPrquantity(int prquantity) {
+        this.prquantity = prquantity;
+    }
+
+    @Override
+    public String toString() {
+        return "products [product id=" + prid + ", product name=" + prname + ", product price=" + prprice + ", product quantity=" + prquantity+ "]";
+    }    
+}
+
+public class Product {
+    public static void main(String[] args) {
+        products[] prd = new products[3];//ARray of object creation
+        int j;
+        Scanner sa = new Scanner(System.in);//Sacnner Created
+        for (j = 0; j <prd.length; j++) {
+            prd[j]=new products();//new instance/object of class based on index/or array length...
+            System.out.println("Enter Product Id:");
+            prd[j].setPrid(sa.nextInt());
+            System.out.println("Enter Product Name:");
+            prd[j].setPrname(sa.next());
+             System.out.println("Enter Product Price:");
+            prd[j].setPrprice(sa.nextFloat());
+            System.out.println("Enter Product Quantity:");
+            prd[j].setPrquantity(sa.nextInt());
+            }
+        for(int i=0;i<prd.length;i++){
+            System.out.println(prd[i].getPrid());
+        }
+        //called tostring method
+        for(j=0;j<prd.length;j++){
+            System.out.println(prd[j].toString());
+        }
+        //using for loop
+        for(products prd1:prd){
+        System.out.println(prd1);
+        }
+    }
+}
+/*
+ output of this program
+ -------------------------------
+ Enter Product Id:
+101
+Enter Product Name:
+Mi
+Enter Product Price:
+12000
+Enter Product Quantity:
+5
+Enter Product Id:
+102
+Enter Product Name:
+Oppo
+Enter Product Price:
+14000
+Enter Product Quantity:
+20
+Enter Product Id:
+103
+Enter Product Name:
+Redmi
+Enter Product Price:
+15000
+Enter Product Quantity:
+25
+101
+102
+103
+products [product id=101, product name=Mi, product price=12000.0, product quantity=5]    
+products [product id=102, product name=Oppo, product price=14000.0, product quantity=20] 
+products [product id=103, product name=Redmi, product price=15000.0, product quantity=25]
+products [product id=101, product name=Mi, product price=12000.0, product quantity=5]    
+products [product id=102, product name=Oppo, product price=14000.0, product quantity=20]
+products [product id=103, product name=Redmi, product price=15000.0, product quantity=25]
+ */

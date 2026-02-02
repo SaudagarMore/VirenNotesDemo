@@ -1,0 +1,15 @@
+1)Use a for loop to count how many numbers between 1 to 200 are divisible by both 3 and 7.
+2)Accept a number and use a while loop to print its digits in reverse order.
+3)Use a for loop to print the squares of numbers from 10 to 1 in descending order.
+4)Use a do-while loop to calculate the sum of even numbers until the user enters an odd number.
+
+---------------------------------------------------------------------------------------------------------------
+5)Create a method named CheckPalindrome that takes one integer parameter.
+Your method should:
+Check if the number is greater than 0.   
+Reverse the digits of the number.  
+Check if the reversed number is equal to the original number.
+Print:  "Number is a palindrome" if it matches.
+"Number is not a palindrome" otherwise.
+Example: Input: 121  Output: Number is a palindrome
+-----------------------------------------------------------------------

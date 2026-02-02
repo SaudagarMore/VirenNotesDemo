@@ -1,0 +1,175 @@
+# programme for class and object of person
+#self
+#class Declared /created
+class Person:
+     #method of class with including 4 parameters of person
+    def AddNumbers(data,num1,num2):
+        data.no1=num1
+        data.no2=num2
+    
+    def CheckMaxandMin(mydata):
+        if mydata.no1>mydata.no2:
+            print(mydata.no1,"is max than",mydata.no2)
+        else:
+            print(mydata.no2,"Max than ",mydata.no1)
+        
+    def PrintListDeails(self,Mylist):
+        self.newlist=Mylist
+
+        for j in self.newlist:
+            print(j)
+    
+    def AddlistNewItem(self):       
+        Demolist=[]
+        Demolist.extend([10,20,30,40,50])
+        self.newlist.extend(Demolist)
+        print("New Updated list is:",self.newlist)
+        
+    def GetPersonDetails(self,pid,pname,page,pcontact):
+        #class members created (personid,personnamepersonage,personcontact)
+        self.personid=pid  #201
+        self.personname=pname
+        self.personage=page
+        self.personcontact=pcontact
+        
+        #data method
+    def PrintPersonDetails(self,pid,pname,page,pcontact):
+        self.GetPersonDetails(pid,pname,page,pcontact)
+        
+        print("Person id is:",self.personid)
+        print("Person Name is:",self.personname)
+        print("Person Age is:",self.personage)
+        print("Person Contact:",self.personcontact)
+                
+        #data method
+    # def TestAppp(self):
+    #     for k in range(1,5):
+    #         print(k," ","Person Data Printed")
+   
+#object creation in python
+mydata=["C","CPP","Java","Python"]
+P1=Person()
+#P1.AddNumbers(20,30)
+#P1.CheckMaxandMin()
+P1.PrintListDeails(mydata)
+P1.AddlistNewItem()
+
+#P1.PrintPersonDetails(101,"kunal",25,9307014300)
+
+#method Called Using Person Class Object
+#P1.PrintPersonDetails()
+#P1.TestAppp()               
+----------------------------------------------------------------------------------
+
+Q)1:
+------------
+Student Information System
+Problem Statement:
+Create a class named Student with the following:
+Data Members:
+1)name (string)
+2)roll_number (integer)
+3)marks (float)
+4)Member Functions:
+
+input_details() – to accept values from the user.
+display_details() – to display student details.
+
+Task:
+Create an object of the class and use it to input and display details of a student.
+
+Q)2: 
+------------
+Book Management System
+Problem Statement:
+Create a class called Book with the following:
+Data Members:
+
+1)title (string)
+2)author (string)
+3)price (float)
+
+Member Functions:
+set_details() – to set the book details.
+display_book() – to display the book information.
+
+Task:
+Create multiple book objects and display their details.
+
+Q)3:
+-------------
+Employee Salary Calculator
+Problem Statement:
+Create a class Employee with the following:
+Data Members:
+
+1)name (string)
+2)employee_id (integer)
+3)basic_salary (float)
+4)Member Functions:
+
+set_data() – to input employee details.
+
+calculate_salary() – to calculate total salary (basic + 10% bonus).
+display_salary() – to display employee name and total salary.
+
+Task:
+Create an object of Employee, enter details, and show calculated salary.
+
+Q4.
+-------
+Create a Python class called Student with attributes name and marks.
+Write a method to set the values of these attributes.
+Add getter methods to access them.
+Include a method is_passed() that returns True if marks are 40 or more.
+Create an object, set values using the method, and print whether the student passed or failed.
+
+Q5.
+--------
+Create a Python class named Book with attributes title, author, and price.
+Write a method to set all the attribute values.
+Add a separate method to update the price.
+Override the __str__() method to return book details.
+Create an object, set its values using the method, update the price, and print the object.
+
+Q6.
+-------
+Create a Python class named BankAccount with an attribute balance.
+Use a method to initialize the balance.
+Add methods deposit(amount) and withdraw(amount) with checks:
+Do not allow negative deposit or withdrawal.
+Do not allow withdrawal more than the current balance.
+Print the final balance using a method.
+
+Q7.
+-----
+Create a Python class named Car with attributes make and year.
+Use a method to set both attributes.
+If the year is not provided, default it to 2020 inside the method.
+Override the __str__() method to display car details.
+Create a list of 3 car objects, initialize them using the method, and print each one.
+
+Q8.
+-------
+Create a Python class named Product with attributes name, price, and quantity.
+Use a method to set the attribute values.
+Add a method get_total_cost() that returns the total cost (price × quantity).
+Create an object, set the values using the method, and print the total cost using __str__().
+
+Q9.
+---------
+Create a Python class named Person with attributes name and age.
+Use a method to set both values. Ensure that age cannot be negative.
+Add a method is_adult() that returns True if the age is 18 or more.
+Create an object, set the values using the method, and print whether the person is an adult.
+
+Q10.
+-------
+Create a Python class named Movie with attributes title and rating.
+Use a method to set the values. Validate that rating is between 1 and 5.
+Add a method get_category() that returns:
+"Excellent" if rating > 4
+"Good" if rating is between 3 and 4
+"Average" if rating < 3
+Display movie details using the __str__() method.
+

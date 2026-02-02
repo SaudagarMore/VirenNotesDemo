@@ -1,0 +1,80 @@
+1. Add and Display Elements (User Input & Looping)
+Main Task:
+Take 5 string inputs from the user and add them to a LinkedList.
+After insertion, display all elements.
+Add one more element "Extra" at index 2 using add(int, E).
+Replace the last element with "Final" using removeLast() followed by addLast().
+
+2. Insert at Specific Position and Validate
+Main Task:
+Take 3 elements from the user. Insert one at index 1.
+Try inserting at index greater than the current size – handle the exception.
+If the list already contains the value to be inserted, skip insertion and print a message.
+
+3. Add to Beginning and End + Check for Duplicates
+Main Task:
+Ask the user for two names: one to add at beginning and one at end.
+Before adding, check if the name already exists in the list using contains().
+If it does, ask for a new name.
+Display the first and last elements using getFirst() and getLast().
+
+4. Retrieve Elements and Handle Edge Cases
+Main Task:
+Add 4 elements manually to the list.
+Try retrieving elements at index 0, 2, and out-of-bound index 5.
+Print a message if index is invalid (use try-catch).
+Display the entire list using a loop.
+
+5. Search and Replace if Found
+Main Task:
+Ask the user for a name to search in the list.
+If the element exists, remove it using remove(int) and replace it with "Updated" at the same index.
+If not found, add the new element to the end.
+
+6. Remove by Index and By Value
+Main Task:
+Add 5 values and display them.
+Ask the user to enter a value to remove.
+If found, remove it.
+If not, print "Element not found".
+Then remove the element at index 2.
+Finally, remove the first and last elements using removeFirst() and removeLast().
+
+7. Size, Clear, and Condition-Based Clear
+Main Task:
+Add any number of values until user types "done".
+After all insertions, display the size of the list.
+If size > 5, clear the list automatically.
+Otherwise, print “List is safe”.
+
+8. Reverse LinkedList (Manual Stack Simulation)
+Main Task:
+Add 6 elements and reverse the list.
+Don't use Collections.reverse().
+Create a new LinkedList and move elements from the original using removeLast() and add() to simulate a reverse.
+Display both original and reversed lists.
+
+9. Input Until Stop + Even/Odd Name Separation
+Main Task:
+Keep accepting names from user until "stop" is typed.
+Add even-length strings to one LinkedList and odd-length strings to another.
+After all inputs:
+Display both even and odd name lists.
+Remove the first item from each.
+Print the updated lists and their sizes.
+
+10. Menu-Driven Advanced LinkedList Program
+Main Task:
+Implement a menu:
+1. Add at end
+2. Add at beginning
+3. Remove by index
+4. Check if list is empty
+5. Get element by index
+6. Display list
+7. Clear list
+8. Exit
+If user chooses to get an index that's out-of-bounds, print “Invalid index”.
+If trying to remove from an empty list, print a warning.
+After every operation, print the list and its size.
+Allow user to perform at least 5 operations in one run.
